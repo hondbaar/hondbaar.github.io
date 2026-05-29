@@ -1,12 +1,14 @@
-/* Hondbaar — custom brand layer on top of HTML5 UP "Landed" */
+/* Hondbaar — custom layer on top of HTML5 UP "Landed" (standaard kleuren) */
 
 :root {
-	--brand: #4f8068;
-	--brand-dark: #3f6553;
-	--brand-darker: #2f4d3f;
-	--brand-light: #6aa080;
-	--warm: #e0975a;
-	--ink: #5b6249;
+	--accent: #e44c65;
+	--accent-light: #e76278;
+	--bg: #1c1d26;
+	--panel: #272833;
+	--fg: rgba(255, 255, 255, 0.75);
+	--fg-bold: #ffffff;
+	--border: rgba(255, 255, 255, 0.15);
+	--panel-bg: rgba(255, 255, 255, 0.075);
 }
 
 /* Logo / brand wordmark */
@@ -23,11 +25,11 @@
 	letter-spacing: 0.25em;
 	font-size: 0.7rem;
 	font-weight: 700;
-	color: var(--brand);
+	color: var(--accent);
 	margin-bottom: 1em;
 }
 .eyebrow.light {
-	color: rgba(255, 255, 255, 0.85);
+	color: rgba(255, 255, 255, 0.9);
 }
 
 /* Banner / hero tweaks */
@@ -43,27 +45,25 @@
 	letter-spacing: 0.3em;
 	font-size: 0.8rem;
 	font-weight: 700;
-	color: var(--warm);
+	color: var(--accent-light);
 }
 
-/* Page hero for inner pages */
+/* Page hero for inner pages (donkere template-stijl) */
 .page-hero {
-	background-image: linear-gradient(45deg, var(--brand-darker), var(--brand-dark));
-	color: rgba(255, 255, 255, 0.9);
-	padding: 7em 0 5em 0;
+	background-color: var(--panel);
+	background-image: linear-gradient(45deg, var(--bg), var(--panel));
+	color: var(--fg);
+	padding: 8em 0 5em 0;
 	text-align: center;
 }
 .page-hero h1,
 .page-hero h2 {
-	color: #ffffff;
+	color: var(--fg-bold);
 }
 .page-hero p {
 	max-width: 40em;
 	margin-left: auto;
 	margin-right: auto;
-}
-.page-hero .eyebrow {
-	color: var(--warm);
 }
 
 /* Quote lists ("Herken je dit?") */
@@ -75,12 +75,10 @@
 	position: relative;
 	padding: 1em 1.25em 1em 3em;
 	margin-bottom: 1em;
-	background: #ffffff;
-	border-left: 4px solid var(--brand);
-	border-radius: 0.375em;
-	box-shadow: 0 4px 18px rgba(47, 77, 63, 0.06);
+	background: var(--panel-bg);
+	border-left: 3px solid var(--accent);
+	border-radius: 4px;
 	font-style: italic;
-	color: var(--ink);
 }
 .quote-list li::before {
 	content: "\201C";
@@ -89,7 +87,7 @@
 	top: 0.1em;
 	font-size: 2.2em;
 	line-height: 1;
-	color: var(--brand-light);
+	color: var(--accent-light);
 	font-family: Georgia, serif;
 }
 
@@ -98,21 +96,21 @@
 	font-size: 1.05em;
 }
 
-/* Cards (trajecten overview, pillars) */
+/* Cards (trajecten overview, pijlers) */
 .card {
 	height: 100%;
-	background: #ffffff;
-	border-radius: 0.5em;
+	background: var(--panel-bg);
+	border: 1px solid var(--border);
+	border-radius: 4px;
 	padding: 2em;
-	box-shadow: 0 8px 30px rgba(47, 77, 63, 0.08);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 .card:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 14px 40px rgba(47, 77, 63, 0.12);
+	background: rgba(255, 255, 255, 0.12);
 }
 .card .icon.major {
-	color: var(--brand);
+	color: var(--accent);
 	margin-bottom: 0.5em;
 }
 .card h3 {
@@ -122,29 +120,18 @@
 	margin-bottom: 0;
 }
 
-/* Dark CTA wrapper (guaranteed styling regardless of template) */
-.wrapper.style3.special {
-	background-image: linear-gradient(45deg, var(--brand-dark), var(--brand-darker));
-	color: rgba(255, 255, 255, 0.9);
-	text-align: center;
-}
-.wrapper.style3.special h2,
-.wrapper.style3.special h3 {
-	color: #ffffff;
-}
-
 /* Traject detail blocks */
 .traject {
-	background: #ffffff;
-	border-radius: 0.5em;
+	background: var(--panel-bg);
+	border: 1px solid var(--border);
+	border-radius: 4px;
 	padding: 2.5em;
 	margin-bottom: 2.5em;
-	box-shadow: 0 8px 30px rgba(47, 77, 63, 0.07);
 }
 .traject .meta {
 	display: inline-block;
-	background: rgba(79, 128, 104, 0.1);
-	color: var(--brand-dark);
+	background: rgba(228, 76, 101, 0.15);
+	color: var(--accent-light);
 	font-weight: 600;
 	font-size: 0.8rem;
 	padding: 0.4em 0.9em;
@@ -156,14 +143,14 @@
 }
 .traject h4 {
 	margin-top: 1.5em;
-	color: var(--brand-dark);
+	color: var(--fg-bold);
 }
 
-/* FAQ accordion using native details/summary */
+/* FAQ accordion met native details/summary */
 details.faq {
-	background: #ffffff;
-	border: 1px solid #efeff0;
-	border-radius: 0.375em;
+	background: var(--panel-bg);
+	border: 1px solid var(--border);
+	border-radius: 4px;
 	margin-bottom: 0.75em;
 	overflow: hidden;
 }
@@ -171,7 +158,7 @@ details.faq summary {
 	cursor: pointer;
 	padding: 1.1em 1.4em;
 	font-weight: 600;
-	color: var(--ink);
+	color: var(--fg-bold);
 	list-style: none;
 	position: relative;
 	padding-right: 3em;
@@ -186,23 +173,21 @@ details.faq summary::after {
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 1.4em;
-	color: var(--brand);
-	transition: transform 0.2s ease;
+	color: var(--accent);
 }
 details.faq[open] summary::after {
 	content: "\2013";
 }
 details.faq summary:hover {
-	color: var(--brand-dark);
+	color: var(--accent);
 }
 details.faq .faq-body {
 	padding: 0 1.4em 1.3em 1.4em;
-	color: #7f888f;
 }
 .faq-group-title {
 	margin-top: 2em;
 	margin-bottom: 1em;
-	color: var(--brand-dark);
+	color: var(--fg-bold);
 }
 
 /* Contact info list */
@@ -213,46 +198,37 @@ details.faq .faq-body {
 .contact-details li {
 	padding: 0.6em 0 0.6em 2.2em;
 	position: relative;
-	border-bottom: 1px solid #efeff0;
+	border-bottom: 1px solid var(--border);
 }
 .contact-details li .icon {
 	position: absolute;
 	left: 0;
 	top: 0.7em;
-	color: var(--brand);
+	color: var(--accent);
 }
 
 /* Footer */
 #footer .footer-brand {
 	font-weight: 800;
 	text-transform: lowercase;
-	color: #ffffff;
+	color: var(--fg-bold);
 	letter-spacing: 0.02em;
-}
-#footer h4 {
-	color: #ffffff;
-}
-#footer .copyright {
-	margin-top: 1em;
 }
 
 /* Legal pages readability */
 .legal h3 {
 	margin-top: 2em;
-	color: var(--brand-dark);
+	color: var(--fg-bold);
 }
 .legal table {
 	margin-top: 1em;
 }
 .legal .note {
-	background: rgba(224, 151, 90, 0.12);
-	border-left: 4px solid var(--warm);
+	background: rgba(228, 76, 101, 0.12);
+	border-left: 3px solid var(--accent);
 	padding: 1.2em 1.4em;
-	border-radius: 0.375em;
+	border-radius: 4px;
 	margin-top: 2em;
-}
-.legal blockquote {
-	border-left: 4px solid var(--brand);
 }
 
 /* Small helpers */
@@ -261,7 +237,6 @@ details.faq .faq-body {
 }
 .lead {
 	font-size: 1.15em;
-	color: var(--ink);
 }
 .centered-col {
 	margin: 0 auto;
