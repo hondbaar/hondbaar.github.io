@@ -16,6 +16,9 @@ permalink: /trajecten.html
 
 								{% for traject in site.data.trajecten %}
 								<div class="traject" id="{{ traject.id }}">
+									{% if traject.foto %}
+									<span class="traject-foto"><img src="{{ traject.foto | relative_url }}" alt="{{ traject.foto_alt }}" /></span>
+									{% endif %}
 									<span class="meta">{{ traject.meta }}</span>
 									<h2>{{ traject.titel }}</h2>
 									<p>{{ traject.intro }}</p>
