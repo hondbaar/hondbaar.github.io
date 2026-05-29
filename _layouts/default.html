@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<!--
+	Hondbaar — {{ page.title }}
+	Gebaseerd op "Massively" by HTML5 UP (html5up.net | @ajlkn) — CCA 3.0 license
+-->
+<html lang="{{ site.lang | default: 'nl' }}">
+	{% include head.html %}
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% include nav.html %}
+
+				<!-- Main -->
+					<div id="main">
+
+{{ content }}
+
+					</div>
+
+				{% include footer.html %}
+
+			</div>
+
+		{% include scripts.html %}
+
+	</body>
+</html>
