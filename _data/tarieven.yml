@@ -1,16 +1,16 @@
-# Tarievenoverzicht. Vul de bedragen tussen [ ] in.
+# Tarievenoverzicht.
 # Elke rij: dienst | omschrijving | prijs.
 
 tarieven:
   - dienst: Losse les
     omschrijving: 60 minuten, 1-op-1 op locatie
-    prijs: "€ [bedrag]"
+    prijs: "€ 55"
   - dienst: Lessenpakket 5 lessen
     omschrijving: 5 lessen van 60 minuten · 12 maanden geldig
-    prijs: "€ [bedrag]"
+    prijs: "€ 250"
   - dienst: Lessenpakket 10 lessen
     omschrijving: 10 lessen van 60 minuten · 12 maanden geldig
-    prijs: "€ [bedrag]"
+    prijs: "€ 450"
   - dienst: Muilkorfpassessie
     omschrijving: 30 minuten, met The Muzzle Movement
     prijs: "€ 20"
@@ -22,5 +22,5 @@ tarieven:
 toelichting:
   - Alle bedragen zijn inclusief btw.
   - Muilkorftraining gaat op het gewone lestarief; de passessie wordt apart gerekend.
-  - Reiskosten bedragen € 0,35 per kilometer, gerekend vanaf [postcode].
+  - Reiskosten bedragen € 0,35 per kilometer, gerekend vanaf postcode 6717XN.
   - Lespakketten worden vooraf gefactureerd en zijn twaalf maanden geldig vanaf de eerste les.
