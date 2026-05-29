@@ -1,18 +1,132 @@
-/* Hondbaar — custom laag boven HTML5 UP "Massively" (standaard kleuren) */
+/* Hondbaar — custom laag boven HTML5 UP "Massively"
+   Huisstijl conform design briefing:
+     Donkerpaars #3D2A4E · Teal #2D7A7B · Crème #F0E6D6 · Aubergine #2A1B35
+   Typografie: Poppins (geometrische, warme sans-serif) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-	--accent: #18bfef;
-	--fg: #212931;
-	--fg-light: #717981;
-	--border: #e2e2e2;
+	--purple: #3D2A4E;
+	--teal: #2D7A7B;
+	--teal-dark: #246364;
+	--cream: #F0E6D6;
+	--cream-soft: #f7f1e6;
+	--aubergine: #2A1B35;
+	--accent: #2D7A7B;
+	--fg: #2A1B35;
+	--fg-light: #6f6577;
+	--border: #e3dccd;
 }
 
-/* Logo wordmark */
+/* ===========================================================
+   Typografie — Poppins overal
+   =========================================================== */
+body, input, select, textarea,
+h1, h2, h3, h4, h5, h6,
+#nav ul.links, .button, input[type="submit"], input[type="reset"], input[type="button"],
+.post > header.major .date {
+	font-family: 'Poppins', Helvetica, sans-serif;
+}
+body, input, select, textarea {
+	font-weight: 400;
+	color: var(--fg);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	color: var(--purple);
+}
+strong, b {
+	color: var(--purple);
+}
+
+/* ===========================================================
+   Achtergrond & contentpaneel — warme crème i.p.v. wit
+   =========================================================== */
+#wrapper > .bg {
+	background-color: var(--aubergine) !important;
+}
+#main {
+	background-color: var(--cream) !important;
+}
+/* zachte secties (bv. losse blokken) iets warmer */
+.quote-list li {
+	background: var(--cream-soft);
+}
+
+/* Links in de tekst */
+#main a {
+	color: var(--teal);
+	border-bottom-color: rgba(45, 122, 123, 0.4);
+}
+#main a:hover {
+	color: var(--teal-dark);
+}
+
+/* Koppen: datum-eyebrow van de posts in teal */
+.post > header.major .date {
+	color: var(--teal);
+}
+.post > header.major .date::before {
+	background: var(--teal);
+}
+
+/* ===========================================================
+   Knoppen — teal als primaire merkkleur
+   =========================================================== */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px var(--teal);
+	color: var(--purple) !important;
+	border-radius: 6px;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+	background-color: rgba(45, 122, 123, 0.08);
+	box-shadow: inset 0 0 0 2px var(--teal-dark);
+	color: var(--teal-dark) !important;
+}
+input[type="submit"].primary,
+button.primary,
+.button.primary {
+	background-color: var(--teal);
+	box-shadow: inset 0 0 0 2px var(--teal);
+	color: #ffffff !important;
+}
+input[type="submit"].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+	background-color: var(--teal-dark);
+	box-shadow: inset 0 0 0 2px var(--teal-dark);
+	color: #ffffff !important;
+}
+
+/* Logo wordmark — kleine letters, medium gewicht (conform briefing) */
 #header .logo,
 #nav .logo {
-	font-weight: 900;
+	font-family: 'Poppins', Helvetica, sans-serif;
+	font-weight: 500;
 	text-transform: lowercase;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.02em;
+}
+
+/* Kleur-logo bovenaan het content-paneel (homepage) */
+.brand-logo {
+	text-align: center;
+	margin: 0 0 1.5rem 0;
+}
+.brand-logo img {
+	width: 100%;
+	max-width: 360px;
+	height: auto;
 }
 
 /* Eyebrow boven koppen */
@@ -26,12 +140,13 @@
 	margin: 0 0 1rem 0;
 }
 
-/* Tagline onder de intro */
+/* Tagline — hoofdletters, ruime letterspacing, teal (conform briefing) */
 .tagline {
 	text-transform: uppercase;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.28em;
 	font-size: 0.7rem;
 	font-weight: 600;
+	color: var(--teal);
 }
 
 /* Quote-lijsten ("Herken je dit?") */
@@ -43,8 +158,8 @@
 	position: relative;
 	padding: 1.25rem 1.5rem 1.25rem 3.25rem;
 	margin: 0 0 1rem 0;
-	background: #f7f7f7;
-	border-left: 3px solid var(--accent);
+	background: var(--cream-soft);
+	border-left: 3px solid var(--teal);
 	border-radius: 4px;
 	font-style: italic;
 	font-size: 0.95em;
@@ -72,8 +187,8 @@
 }
 .traject .meta {
 	display: inline-block;
-	background: rgba(24, 191, 239, 0.12);
-	color: #0f7fa0;
+	background: rgba(45, 122, 123, 0.12);
+	color: #246364;
 	font-weight: 600;
 	font-size: 0.7rem;
 	letter-spacing: 0.05em;
@@ -114,7 +229,7 @@ a.card h3 {
 }
 a.card:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 1rem 2rem 0 rgba(33, 41, 49, 0.1);
+	box-shadow: 0 1rem 2rem 0 rgba(42, 27, 53, 0.12);
 	border-color: var(--accent);
 }
 a.card:hover h3 {
@@ -143,9 +258,9 @@ details.faq {
 details.faq summary {
 	cursor: pointer;
 	padding: 1.1rem 1.4rem;
-	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	font-family: 'Poppins', Helvetica, sans-serif;
 	font-weight: 600;
-	color: var(--fg);
+	color: var(--purple);
 	list-style: none;
 	position: relative;
 	padding-right: 3rem;
@@ -206,7 +321,7 @@ details.faq .faq-body {
 	margin-top: 2.5rem;
 }
 .legal .note {
-	background: rgba(24, 191, 239, 0.08);
+	background: rgba(45, 122, 123, 0.08);
 	border-left: 3px solid var(--accent);
 	padding: 1.25rem 1.5rem;
 	border-radius: 4px;
@@ -230,8 +345,8 @@ details.faq .faq-body {
 		height: 3.5rem !important;
 		line-height: 3.5rem !important;
 		overflow: visible !important;
-		background: rgba(30, 37, 45, 0.95) !important;
-		box-shadow: 0 0.125rem 0.5rem 0 rgba(30, 37, 45, 0.25);
+		background: rgba(61, 42, 78, 0.97) !important;
+		box-shadow: 0 0.125rem 0.5rem 0 rgba(42, 27, 53, 0.25);
 		z-index: 9000;
 		/* schakel de reveal-animatie/transform van de homepage uit */
 		transform: none !important;
@@ -284,8 +399,8 @@ details.faq .faq-body {
 		min-width: 15rem;
 		margin: 0;
 		padding: 0;
-		background: rgba(30, 37, 45, 0.98);
-		box-shadow: 0 0.5rem 1rem 0 rgba(30, 37, 45, 0.35);
+		background: rgba(42, 27, 53, 0.98);
+		box-shadow: 0 0.5rem 1rem 0 rgba(42, 27, 53, 0.35);
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(0.5rem);
@@ -313,7 +428,7 @@ details.faq .faq-body {
 		white-space: nowrap;
 	}
 	#nav ul.links li.has-submenu .submenu li a:hover {
-		background-color: rgba(24, 191, 239, 0.9) !important;
+		background-color: rgba(45, 122, 123, 0.95) !important;
 		color: #ffffff !important;
 	}
 
@@ -334,6 +449,47 @@ details.faq .faq-body {
 	padding-left: 1.25rem !important;
 	font-size: 0.95em;
 	opacity: 0.8;
+}
+
+/* ===========================================================
+   Intro (homepage) — tekst wit op de donkere achtergrondfoto
+   =========================================================== */
+#intro h1,
+#intro p {
+	color: #ffffff !important;
+}
+
+/* ===========================================================
+   Footer & copyright — aubergine met crème tekst (omkeerbaar)
+   =========================================================== */
+#footer {
+	background-color: var(--aubergine) !important;
+	color: rgba(240, 230, 214, 0.75) !important;
+}
+#footer h2,
+#footer h3,
+#footer h4 {
+	color: var(--cream) !important;
+}
+#footer a {
+	color: var(--cream) !important;
+	border-bottom-color: rgba(240, 230, 214, 0.4) !important;
+}
+#footer a:hover {
+	color: #ffffff !important;
+}
+#footer .contact .icon {
+	color: var(--teal) !important;
+}
+#copyright {
+	background-color: var(--aubergine) !important;
+	color: rgba(240, 230, 214, 0.45) !important;
+}
+#copyright a {
+	color: rgba(240, 230, 214, 0.7) !important;
+}
+#copyright a:hover {
+	color: var(--cream) !important;
 }
 
 /* Helpers */
