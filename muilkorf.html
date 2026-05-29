@@ -41,21 +41,13 @@ permalink: /muilkorf.html
 								<p>Een muilkorf is geen teken dat er iets "mis" is met je hond. Het is een hulpmiddel dat in veel situaties handig of zelfs verplicht is: bij de dierenarts, in het openbaar vervoer, op de boot of in de gondel op vakantie, of als je hond de neiging heeft om van alles van straat te eten. En ja, ook bij honden die uitvallen kan een muilkorf jou en je omgeving een veiliger en rustiger gevoel geven.</p>
 								<p>Het verschil zit hem in <em>hoe</em> je de muilkorf aanleert. Wordt hij er zomaar opgezet, dan voelt hij beklemmend en eng. Maar leer je hem stap voor stap en met positieve associaties aan, dan leren de meeste honden — puppy én volwassen — verrassend snel dat de muilkorf veilig en zelfs leuk is. Het is een teken van goede voorbereiding, niet van falen.</p>
 								<div class="row">
+									{% for p in site.data.pijlers.muilkorf %}
 									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-seedling"></span>
-										<h3>Positief &amp; stapsgewijs</h3>
-										<p>We bouwen de gewenning rustig op, zodat je hond zelf een fijne associatie krijgt met de muilkorf. Geen dwang, geen schrik.</p>
+										<span class="icon solid major {{ p.icoon }}"></span>
+										<h3>{{ p.titel }}</h3>
+										<p>{{ p.tekst }}</p>
 									</div>
-									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-paw"></span>
-										<h3>Voor puppy én volwassen hond</h3>
-										<p>Jong geleerd is mooi meegenomen, maar ook een volwassen hond leert vaak sneller dan je denkt dat de muilkorf oké is.</p>
-									</div>
-									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-ruler-combined"></span>
-										<h3>De juiste pasvorm</h3>
-										<p>Een muilkorf werkt alleen als hij goed past én je hond ermee kan hijgen en drinken. Daarom hoort een passessie erbij.</p>
-									</div>
+									{% endfor %}
 								</div>
 							</section>
 

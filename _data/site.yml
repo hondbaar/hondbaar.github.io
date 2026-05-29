@@ -1,0 +1,17 @@
+# Site-brede teksten en waarden.
+# Pas hier algemene gegevens aan; ze worden op meerdere pagina's gebruikt.
+
+tagline: Dierbaar · Zichtbaar · Voelbaar
+
+werkgebied: Ede en omstreken · lessen op locatie
+werkgebied_kort: Ede en omstreken
+reactietijd: Meestal binnen 1-2 werkdagen
+telefoon: "[telefoonnummer]"
+
+# Footer
+footer:
+  werkgebied_titel: Werkgebied
+  werkgebied_regels:
+    - Ede en omstreken
+    - Lessen op locatie
+  kvk: "[nummer]"

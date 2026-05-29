@@ -23,6 +23,7 @@ uit de layouts en includes.
 ```
 _config.yml          site-instellingen (titel, e-mail, url)
 Gemfile              github-pages gem-set (voor lokaal testen)
+_data/               teksten & gegevens (zie hieronder)
 _layouts/
   default.html       binnenpagina's (header + nav + content + footer)
   home.html          homepage (met intro-hero)
@@ -33,6 +34,24 @@ _includes/
   scripts.html       JS aan het einde van de pagina
 assets/              CSS, JS, fonts, logo's (ongewijzigd t.o.v. het template)
 ```
+
+### Teksten aanpassen (`_data/`)
+
+De inhoud die op meerdere plekken terugkomt of vaak wijzigt, staat los van de
+HTML in `_data/`. Je kunt deze YAML-bestanden aanpassen zonder de pagina's zelf
+aan te raken — de site bouwt automatisch opnieuw.
+
+| Bestand | Inhoud |
+|---|---|
+| `_data/site.yml` | Werkgebied, reactietijd, telefoon, KvK, footer-tekst |
+| `_data/trajecten.yml` | De vier trajecten (gebruikt op trajecten-pagina én homepage-kaarten) |
+| `_data/faq.yml` | Veelgestelde vragen, gegroepeerd per thema |
+| `_data/pijlers.yml` | De "aanpak"-, "waarden"- en muilkorf-blokjes (icoon + kop + tekst) |
+| `_data/opleidingen.yml` | De opleidings- en bijscholingstabellen |
+
+Een nieuw traject, FAQ-vraag of opleiding toevoegen = een blok bijzetten in het
+betreffende `.yml`-bestand. Tekst met leestekens (komma's, dubbele punten,
+aanhalingstekens) mag gewoon worden ingetypt.
 
 - Gebaseerd op het **"Massively"**-template van [HTML5 UP](https://html5up.net) (CCA 3.0-licentie).
 - `assets/css/main.css` — template-stijl, herkleurd naar de Hondbaar-huisstijl.
