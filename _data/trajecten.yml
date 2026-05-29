@@ -18,6 +18,8 @@
   icoon: fa-paw
   titel: Puppytraject
   meta: Startpakket 5 lessen · uitbreidbaar
+  foto: images/puppy.jpg
+  foto_alt: Zwarte pup zit rustig te wachten tijdens een uitje
   intro: >-
     Een fijne start is goud waard. In het puppytraject werken we aan een stevige
     basis: opvoeding, prikkelbeheersing, rust én leren begrijpen wat jouw pup je vertelt.
@@ -45,6 +47,8 @@
   icoon: fa-dog
   titel: Maatwerk voor volwassen honden
   meta: Maatwerk · losse lessen of pakket
+  foto: images/hond-tramhalte.jpg
+  foto_alt: Hond traint ontspannen bij een tramhalte in de stad
   intro: >-
     Voor honden én eigenaren die ergens tegenaan lopen in het dagelijks leven.
     We kijken samen wat jij en jouw hond nodig hebben — en gaan daarmee aan de slag.
@@ -73,6 +77,8 @@
   icoon: fa-shield-alt
   titel: Muilkorftraining
   meta: Passessie 30 min · €20 · training op lestarief
+  foto: images/muilkorf-bos.jpg
+  foto_alt: Hond rent vrij en blij door het bos met een goed passende muilkorf
   intro: >-
     Een muilkorf is een hulpmiddel — geen drama. We leren je hond op een positieve,
     rustige manier dat de muilkorf veilig en oké is. Stap voor stap, op het tempo van je hond.
