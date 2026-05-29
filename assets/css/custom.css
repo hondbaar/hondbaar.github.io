@@ -369,6 +369,30 @@ details.faq .faq-body {
 		line-height: 3.5rem;
 	}
 
+	/* Logo-mark links in de balk, vóór 'Home' */
+	#nav ul.links li.nav-logo {
+		display: flex;
+		align-items: center;
+		background: transparent !important;
+	}
+	#nav ul.links li.nav-logo a {
+		display: flex;
+		align-items: center;
+		padding: 0 0.85rem 0 0.25rem;
+		color: #ffffff; /* zelfde kleur als de Home-link */
+		border-bottom: 0;
+		background: transparent !important;
+	}
+	#nav ul.links li.nav-logo a:hover {
+		color: #ffffff;
+		opacity: 0.85;
+	}
+	#nav ul.links li.nav-logo svg {
+		width: 2rem;
+		height: 2rem;
+		display: block;
+	}
+
 	/* zorg dat de homepage-intro niet achter de balk valt */
 	body #nav {
 		visibility: visible !important;
@@ -449,6 +473,16 @@ details.faq .faq-body {
 	padding-left: 1.25rem !important;
 	font-size: 0.95em;
 	opacity: 0.8;
+}
+
+/* Logo-mark in het mobiele schuifpaneel: klein houden, links uitlijnen */
+#navPanel .links li.nav-logo a {
+	display: inline-flex;
+	align-items: center;
+}
+#navPanel .links li.nav-logo svg {
+	width: 1.75rem;
+	height: 1.75rem;
 }
 
 /* ===========================================================
