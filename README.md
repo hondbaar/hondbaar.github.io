@@ -17,9 +17,9 @@ Statische site, gehost via GitHub Pages op [hondbaar.nl](https://hondbaar.nl).
 
 ## Techniek
 
-- Gebaseerd op het **"Landed"**-template van [HTML5 UP](https://html5up.net) (CCA 3.0-licentie).
-- `assets/css/main.css` — basis-template-stijl, herkleurd naar de Hondbaar-kleuren (warm groen).
-- `assets/css/custom.css` — alle Hondbaar-specifieke aanpassingen (hero's, cards, FAQ-accordeon, footer, juridische pagina's).
+- Gebaseerd op het **"Massively"**-template van [HTML5 UP](https://html5up.net) (CCA 3.0-licentie).
+- `assets/css/main.css` — de standaard template-stijl (licht thema, blauw accent, serif-tekst).
+- `assets/css/custom.css` — alle Hondbaar-specifieke aanpassingen (eyebrows, klikbare kaarten, FAQ-accordeon, traject-blokken, contactgegevens, juridische pagina's).
 
 ## Nog in te vullen
 
