@@ -1,0 +1,269 @@
+/* Hondbaar — custom brand layer on top of HTML5 UP "Landed" */
+
+:root {
+	--brand: #4f8068;
+	--brand-dark: #3f6553;
+	--brand-darker: #2f4d3f;
+	--brand-light: #6aa080;
+	--warm: #e0975a;
+	--ink: #5b6249;
+}
+
+/* Logo / brand wordmark */
+#logo a {
+	font-weight: 800;
+	letter-spacing: 0.02em;
+	text-transform: lowercase;
+}
+
+/* Eyebrow label */
+.eyebrow {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	font-size: 0.7rem;
+	font-weight: 700;
+	color: var(--brand);
+	margin-bottom: 1em;
+}
+.eyebrow.light {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+/* Banner / hero tweaks */
+#banner .content header h2 {
+	max-width: 20em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#banner .tagline {
+	margin-top: 2.5em;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: var(--warm);
+}
+
+/* Page hero for inner pages */
+.page-hero {
+	background-image: linear-gradient(45deg, var(--brand-darker), var(--brand-dark));
+	color: rgba(255, 255, 255, 0.9);
+	padding: 7em 0 5em 0;
+	text-align: center;
+}
+.page-hero h1,
+.page-hero h2 {
+	color: #ffffff;
+}
+.page-hero p {
+	max-width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.page-hero .eyebrow {
+	color: var(--warm);
+}
+
+/* Quote lists ("Herken je dit?") */
+.quote-list {
+	list-style: none;
+	padding: 0;
+}
+.quote-list li {
+	position: relative;
+	padding: 1em 1.25em 1em 3em;
+	margin-bottom: 1em;
+	background: #ffffff;
+	border-left: 4px solid var(--brand);
+	border-radius: 0.375em;
+	box-shadow: 0 4px 18px rgba(47, 77, 63, 0.06);
+	font-style: italic;
+	color: var(--ink);
+}
+.quote-list li::before {
+	content: "\201C";
+	position: absolute;
+	left: 0.5em;
+	top: 0.1em;
+	font-size: 2.2em;
+	line-height: 1;
+	color: var(--brand-light);
+	font-family: Georgia, serif;
+}
+
+.note-block {
+	margin-top: 2em;
+	font-size: 1.05em;
+}
+
+/* Cards (trajecten overview, pillars) */
+.card {
+	height: 100%;
+	background: #ffffff;
+	border-radius: 0.5em;
+	padding: 2em;
+	box-shadow: 0 8px 30px rgba(47, 77, 63, 0.08);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 40px rgba(47, 77, 63, 0.12);
+}
+.card .icon.major {
+	color: var(--brand);
+	margin-bottom: 0.5em;
+}
+.card h3 {
+	margin-bottom: 0.5em;
+}
+.card p:last-child {
+	margin-bottom: 0;
+}
+
+/* Dark CTA wrapper (guaranteed styling regardless of template) */
+.wrapper.style3.special {
+	background-image: linear-gradient(45deg, var(--brand-dark), var(--brand-darker));
+	color: rgba(255, 255, 255, 0.9);
+	text-align: center;
+}
+.wrapper.style3.special h2,
+.wrapper.style3.special h3 {
+	color: #ffffff;
+}
+
+/* Traject detail blocks */
+.traject {
+	background: #ffffff;
+	border-radius: 0.5em;
+	padding: 2.5em;
+	margin-bottom: 2.5em;
+	box-shadow: 0 8px 30px rgba(47, 77, 63, 0.07);
+}
+.traject .meta {
+	display: inline-block;
+	background: rgba(79, 128, 104, 0.1);
+	color: var(--brand-dark);
+	font-weight: 600;
+	font-size: 0.8rem;
+	padding: 0.4em 0.9em;
+	border-radius: 2em;
+	margin-bottom: 1em;
+}
+.traject h2 {
+	margin-bottom: 0.5em;
+}
+.traject h4 {
+	margin-top: 1.5em;
+	color: var(--brand-dark);
+}
+
+/* FAQ accordion using native details/summary */
+details.faq {
+	background: #ffffff;
+	border: 1px solid #efeff0;
+	border-radius: 0.375em;
+	margin-bottom: 0.75em;
+	overflow: hidden;
+}
+details.faq summary {
+	cursor: pointer;
+	padding: 1.1em 1.4em;
+	font-weight: 600;
+	color: var(--ink);
+	list-style: none;
+	position: relative;
+	padding-right: 3em;
+}
+details.faq summary::-webkit-details-marker {
+	display: none;
+}
+details.faq summary::after {
+	content: "+";
+	position: absolute;
+	right: 1.2em;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.4em;
+	color: var(--brand);
+	transition: transform 0.2s ease;
+}
+details.faq[open] summary::after {
+	content: "\2013";
+}
+details.faq summary:hover {
+	color: var(--brand-dark);
+}
+details.faq .faq-body {
+	padding: 0 1.4em 1.3em 1.4em;
+	color: #7f888f;
+}
+.faq-group-title {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	color: var(--brand-dark);
+}
+
+/* Contact info list */
+.contact-details {
+	list-style: none;
+	padding: 0;
+}
+.contact-details li {
+	padding: 0.6em 0 0.6em 2.2em;
+	position: relative;
+	border-bottom: 1px solid #efeff0;
+}
+.contact-details li .icon {
+	position: absolute;
+	left: 0;
+	top: 0.7em;
+	color: var(--brand);
+}
+
+/* Footer */
+#footer .footer-brand {
+	font-weight: 800;
+	text-transform: lowercase;
+	color: #ffffff;
+	letter-spacing: 0.02em;
+}
+#footer h4 {
+	color: #ffffff;
+}
+#footer .copyright {
+	margin-top: 1em;
+}
+
+/* Legal pages readability */
+.legal h3 {
+	margin-top: 2em;
+	color: var(--brand-dark);
+}
+.legal table {
+	margin-top: 1em;
+}
+.legal .note {
+	background: rgba(224, 151, 90, 0.12);
+	border-left: 4px solid var(--warm);
+	padding: 1.2em 1.4em;
+	border-radius: 0.375em;
+	margin-top: 2em;
+}
+.legal blockquote {
+	border-left: 4px solid var(--brand);
+}
+
+/* Small helpers */
+.text-center {
+	text-align: center;
+}
+.lead {
+	font-size: 1.15em;
+	color: var(--ink);
+}
+.centered-col {
+	margin: 0 auto;
+	float: none;
+}
