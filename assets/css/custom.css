@@ -450,10 +450,20 @@ details.faq .faq-body {
 		padding: 0.85rem 1.5rem;
 		font-size: 0.7rem;
 		white-space: nowrap;
+		color: #ffffff !important; /* ook leesbaar wanneer 'Trajecten' actief is */
 	}
 	#nav ul.links li.has-submenu .submenu li a:hover {
 		background-color: rgba(45, 122, 123, 0.95) !important;
 		color: #ffffff !important;
+	}
+	/* De actieve 'Trajecten'-li heeft een witte achtergrond; zorg dat het
+	   submenu zelf donker blijft met witte tekst (niet de witte balk erven) */
+	#nav ul.links li.has-submenu.active {
+		background-color: transparent;
+	}
+	#nav ul.links li.has-submenu.active > a {
+		background-color: #ffffff;
+		color: #2A1B35;
 	}
 
 }
@@ -534,8 +544,9 @@ details.faq .faq-body {
 /* ===========================================================
    Foto's
    =========================================================== */
-/* Afbeelding binnen een traject-blok: nette hoeken, niet te hoog */
+/* Afbeelding binnen een traject-blok: gecentreerd, alle tekst eronder */
 .traject .traject-foto {
+	display: block;
 	margin: 0 0 1.5rem 0;
 	text-align: center;
 }
@@ -545,6 +556,10 @@ details.faq .faq-body {
 	max-height: 460px;
 	border-radius: 6px;
 	display: inline-block;
+}
+/* Meta-label (tarief/duur) altijd als eigen regel onder de foto */
+.traject .meta {
+	clear: both;
 }
 
 /* Algemene contentfoto (over-pagina e.d.) */
