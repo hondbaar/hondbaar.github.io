@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Tarieven — Hondbaar | Lessen, pakketten en sessies"
+description: "Overzicht van de tarieven van Hondbaar: losse les, 5- en 10-lessenpakketten, muilkorfpassessie en videobelgesprek. Welzijnsgerichte hondencoaching in regio Ede."
+nav: tarieven
+permalink: /tarieven.html
+---
+
+						<article class="post">
+							<header class="major">
+								<span class="date">Tarieven</span>
+								<h1>Wat kost het?</h1>
+								<p>Hieronder vind je een overzicht van de tarieven. Twijfel je welke vorm het beste bij jou en je hond past? Neem gerust contact op — dan denk ik met je mee.</p>
+							</header>
+
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr><th>Dienst</th><th>Omschrijving</th><th>Tarief</th></tr>
+									</thead>
+									<tbody>
+										{% for rij in site.data.tarieven.tarieven %}<tr><td>{{ rij.dienst }}</td><td>{{ rij.omschrijving }}</td><td>{{ rij.prijs }}</td></tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+
+							<h4>Goed om te weten</h4>
+							<ul>
+								{% for regel in site.data.tarieven.toelichting %}<li>{{ regel }}</li>
+								{% endfor %}
+							</ul>
+
+							<ul class="actions">
+								<li><a href="{{ '/contact.html' | relative_url }}" class="button primary">Neem contact op</a></li>
+								<li><a href="{{ '/trajecten.html' | relative_url }}" class="button">Bekijk de trajecten</a></li>
+							</ul>
+						</article>

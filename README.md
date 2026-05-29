@@ -8,12 +8,21 @@ Website voor **Hondbaar** — welzijnsgerichte 1-op-1 coaching voor baas en hond
 | Bestand | Pagina |
 |---|---|
 | `index.html` | Home (`layout: home`) |
-| `trajecten.html` | Trajecten + FAQ |
+| `trajecten.html` | Trajecten-overzicht (samenvatting + 'Lees meer') + FAQ |
+| `puppytraject.html` | Puppytraject (losse pagina, `layout: traject`) |
+| `maatwerk.html` | Maatwerk volwassen hond (`layout: traject`) |
+| `videobelsessie.html` | Videobelsessie (`layout: traject`) |
 | `muilkorf.html` | Muilkorftraining & passessies |
+| `tarieven.html` | Tarievenoverzicht |
 | `over.html` | Over Hondbaar |
 | `contact.html` | Contact + contactformulier |
 | `privacy.html` | Privacyverklaring |
 | `voorwaarden.html` | Algemene voorwaarden |
+
+De drie losse traject-pagina's gebruiken `_layouts/traject.html`, dat de inhoud
+uit `_data/trajecten.yml` haalt op basis van `traject_id` in de front matter.
+Een nieuw traject toevoegen = een blok in `trajecten.yml` zetten + een kort
+paginabestand met de juiste `traject_id` en `pagina`-naam.
 
 Elke pagina bevat alleen front matter + de pagina-inhoud; de gedeelde opmaak komt
 uit de layouts en includes.
@@ -44,7 +53,8 @@ aan te raken — de site bouwt automatisch opnieuw.
 | Bestand | Inhoud |
 |---|---|
 | `_data/site.yml` | Werkgebied, reactietijd, telefoon, KvK, footer-tekst |
-| `_data/trajecten.yml` | De vier trajecten (gebruikt op trajecten-pagina én homepage-kaarten) |
+| `_data/trajecten.yml` | De vier trajecten (losse pagina's, trajecten-overzicht én homepage-kaarten) |
+| `_data/tarieven.yml` | Het tarievenoverzicht op de tarieven-pagina |
 | `_data/faq.yml` | Veelgestelde vragen, gegroepeerd per thema |
 | `_data/pijlers.yml` | De "aanpak"-, "waarden"- en muilkorf-blokjes (icoon + kop + tekst) |
 | `_data/opleidingen.yml` | De opleidings- en bijscholingstabellen |

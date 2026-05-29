@@ -1,20 +1,24 @@
 # Alle trajecten op één plek.
-# Worden gebruikt op de trajecten-pagina (volledige beschrijving) én op de
-# homepage (de korte 'kaart'-versie). Pas je hier iets aan, dan verandert het
-# op beide plekken mee.
+# Worden gebruikt op:
+#   - de homepage (de korte 'kaart'-versie)
+#   - de trajecten-overzichtspagina (samenvatting + 'Lees meer'-knop)
+#   - de losse traject-pagina's (volledige beschrijving)
+# Pas je hier iets aan, dan verandert het overal mee.
 #
 # Velden per traject:
-#   id        : anker op de trajecten-pagina (#id) — niet wijzigen i.v.m. links
+#   id        : intern kenmerk
+#   pagina    : bestandsnaam van de losse traject-pagina
 #   icoon     : Font Awesome-icoon (bv. fa-paw)
-#   titel     : kop op de trajecten-pagina
+#   titel     : kop op de losse traject-pagina
 #   meta      : labeltekst met duur/prijs
 #   intro     : inleidende alinea
 #   herken    : lijst met herkenbare uitspraken (optioneel)
 #   punten_titel / punten : opsomming van wat het traject biedt
 #   knoppen   : knoppen onder het traject (tekst + link)
-#   kaart     : korte versie voor de homepage (kop, tekst, link)
+#   kaart     : korte versie (kop + tekst) voor homepage en overzicht
 
 - id: puppy
+  pagina: puppytraject.html
   icoon: fa-paw
   titel: Puppytraject
   meta: Startpakket 5 lessen · uitbreidbaar
@@ -41,9 +45,9 @@
     tekst: >-
       Een fijne start met basiscommando's, rust, prikkelbeheersing en hondentaal
       leren lezen. Startpakket van 5 lessen, uitbreidbaar.
-    link: trajecten.html#puppy
 
 - id: maatwerk
+  pagina: maatwerk.html
   icoon: fa-dog
   titel: Maatwerk voor volwassen honden
   meta: Maatwerk · losse lessen of pakket
@@ -71,9 +75,9 @@
     tekst: >-
       Loop je ergens tegenaan — van lijntrekken tot uitvalgedrag? Samen kijken we
       wat jij en je hond nodig hebben.
-    link: trajecten.html#maatwerk
 
 - id: muilkorf
+  pagina: muilkorf.html
   icoon: fa-shield-alt
   titel: Muilkorftraining
   meta: Passessie 30 min · €20 · training op lestarief
@@ -93,8 +97,6 @@
     - De muilkorfpassessie met The Muzzle Movement kost €20 (30 min)
     - Wil je daarna een of meer trainingen om de muilkorf rustig aan te leren? Die gaan op het gewone lestarief
   knoppen:
-    - tekst: Meer over muilkorftraining
-      link: muilkorf.html
     - tekst: Vraag naar de mogelijkheden
       link: contact.html
   kaart:
@@ -102,12 +104,14 @@
     tekst: >-
       Positief en rustig leren dat de muilkorf oké is — handig voor dierenarts,
       vervoer of vakantie. Inclusief passessie.
-    link: muilkorf.html
 
 - id: videobel
+  pagina: videobelsessie.html
   icoon: fa-video
   titel: Goed voorbereid een hond in huis halen
   meta: Videobelsessie 30-45 min · €50
+  foto: images/hond-water.jpg
+  foto_alt: Hond kijkt uit over het water aan de rand van de stad
   intro: >-
     Ben jij op zoek naar een hond en vraag je je af hoe je je goed voorbereidt?
     In een videobelsessie denk ik met je mee — vóórdat de hond er is.
@@ -126,4 +130,3 @@
     tekst: >-
       Op zoek naar een hond? In 30-45 minuten bespreken we welke hond past bij jou
       en je situatie. Inclusief voorbereiding.
-    link: trajecten.html#videobel
