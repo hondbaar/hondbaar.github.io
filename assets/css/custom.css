@@ -567,3 +567,19 @@ details.faq .faq-body {
 	color: var(--fg-light);
 	font-style: italic;
 }
+
+/* ===========================================================
+   Hero-achtergrond (homepage) — leesbaarheid van de witte tekst
+   over de lichte heidefoto borgen met een iets sterkere overlay
+   en een subtiele tekstschaduw.
+   =========================================================== */
+#wrapper > .bg {
+	background-image:
+		url("../../images/overlay.png"),
+		linear-gradient(0deg, rgba(42, 27, 53, 0.45), rgba(42, 27, 53, 0.45)),
+		url("../../images/bg.jpg") !important;
+}
+#intro h1,
+#intro p {
+	text-shadow: 0 1px 12px rgba(42, 27, 53, 0.55);
+}
