@@ -79,7 +79,7 @@ permalink: /
 								<div class="row">
 									{% for traject in site.data.trajecten %}
 									<div class="col-6 col-12-medium">
-										<a class="card" href="{{ traject.kaart.link }}">
+										<a class="card" href="{{ traject.pagina | relative_url }}">
 											<span class="icon solid major {{ traject.icoon }}"></span>
 											<h3>{{ traject.kaart.titel }}</h3>
 											<p>{{ traject.kaart.tekst }}</p>

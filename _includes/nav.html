@@ -10,13 +10,12 @@
 							<li{% if page.nav == "home" %} class="active"{% endif %}><a href="{{ '/' | relative_url }}">Home</a></li>
 							<li class="has-submenu{% if page.nav == "trajecten" %} active{% endif %}"><a href="{{ '/trajecten.html' | relative_url }}">Trajecten</a>
 								<ul class="submenu">
-									<li><a href="{{ '/trajecten.html' | relative_url }}#puppy">Puppytraject</a></li>
-									<li><a href="{{ '/trajecten.html' | relative_url }}#maatwerk">Maatwerk volwassen hond</a></li>
-									<li><a href="{{ '/muilkorf.html' | relative_url }}">Muilkorftraining</a></li>
-									<li><a href="{{ '/trajecten.html' | relative_url }}#videobel">Videobelsessie</a></li>
+									{% for traject in site.data.trajecten %}
+									<li><a href="{{ traject.pagina | relative_url }}">{{ traject.kaart.titel }}</a></li>
+									{% endfor %}
 								</ul>
 							</li>
-							<li{% if page.nav == "muilkorf" %} class="active"{% endif %}><a href="{{ '/muilkorf.html' | relative_url }}">Muilkorf</a></li>
+							<li{% if page.nav == "tarieven" %} class="active"{% endif %}><a href="{{ '/tarieven.html' | relative_url }}">Tarieven</a></li>
 							<li{% if page.nav == "over" %} class="active"{% endif %}><a href="{{ '/over.html' | relative_url }}">Over Hondbaar</a></li>
 							<li{% if page.nav == "contact" %} class="active"{% endif %}><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
 						</ul>

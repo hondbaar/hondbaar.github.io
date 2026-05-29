@@ -11,35 +11,23 @@ permalink: /trajecten.html
 								<header class="major">
 									<span class="date">Trajecten</span>
 									<h1>Wat past bij jou en je hond?</h1>
-									<p>Elke hond en elke eigenaar is anders. Daarom werk ik met trajecten die zich aanpassen aan jullie vraag — altijd welzijnsgericht, altijd 1-op-1, en altijd met video-analyse zodat je echt ziet wat er gebeurt.</p>
+									<p>Elke hond en elke eigenaar is anders. Daarom werk ik met trajecten die zich aanpassen aan jullie vraag — altijd welzijnsgericht, altijd 1-op-1, en altijd met video-analyse zodat je echt ziet wat er gebeurt. Hieronder een overzicht; klik door voor alle details.</p>
 								</header>
-
-								{% for traject in site.data.trajecten %}
-								<div class="traject" id="{{ traject.id }}">
-									{% if traject.foto %}
-									<span class="traject-foto"><img src="{{ traject.foto | relative_url }}" alt="{{ traject.foto_alt }}" /></span>
-									{% endif %}
-									<span class="meta">{{ traject.meta }}</span>
-									<h2>{{ traject.titel }}</h2>
-									<p>{{ traject.intro }}</p>
-									{% if traject.herken %}
-									<h4>Herken je dit?</h4>
-									<ul class="quote-list">
-										{% for uitspraak in traject.herken %}<li>"{{ uitspraak | escape }}"</li>
-										{% endfor %}
-									</ul>
-									{% endif %}
-									<h4>{{ traject.punten_titel }}</h4>
-									<ul>
-										{% for punt in traject.punten %}<li>{{ punt }}</li>
-										{% endfor %}
-									</ul>
-									<ul class="actions">
-										{% for knop in traject.knoppen %}<li><a href="{{ knop.link }}" class="button">{{ knop.tekst }}</a></li>
-										{% endfor %}
-									</ul>
+								<div class="row">
+									{% for traject in site.data.trajecten %}
+									<div class="col-6 col-12-medium">
+										<a class="card" href="{{ traject.pagina | relative_url }}">
+											<span class="icon solid major {{ traject.icoon }}"></span>
+											<h3>{{ traject.kaart.titel }}</h3>
+											<p>{{ traject.kaart.tekst }}</p>
+											<span class="card-link">Lees meer</span>
+										</a>
+									</div>
+									{% endfor %}
 								</div>
-								{% endfor %}
+								<ul class="actions">
+									<li><a href="{{ '/tarieven.html' | relative_url }}" class="button">Bekijk de tarieven</a></li>
+								</ul>
 							</article>
 
 						<!-- FAQ -->
@@ -68,7 +56,6 @@ permalink: /trajecten.html
 									<p>Neem vrijblijvend contact op om samen te bespreken wat het beste bij jou en je hond past.</p>
 								</header>
 								<ul class="actions">
-									<li><a href="contact.html" class="button primary">Neem contact op</a></li>
+									<li><a href="{{ '/contact.html' | relative_url }}" class="button primary">Neem contact op</a></li>
 								</ul>
 							</section>
-
