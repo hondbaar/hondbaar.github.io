@@ -26,17 +26,21 @@
   foto_alt: Zwarte pup zit rustig te wachten tijdens een uitje
   intro: >-
     Een fijne start is goud waard. In het puppytraject werken we aan een stevige
-    basis: opvoeding, prikkelbeheersing, rust én leren begrijpen wat jouw pup je vertelt.
+    basis: opvoeding, prikkelbeheersing, rust én leren begrijpen wat jouw pup je
+    vertelt. Het traject start met een startpakket van 5 lessen, uitbreidbaar naar
+    10 of meer lessen als dat past bij wat jullie nodig hebben.
   herken:
     - Mijn puppy is buiten met van alles bezig, behalve met mij.
-    - Sinds we de pup hebben is het chaos in huis.
+    - Sinds we de pup hebben is het chaos in huis. De pup is druk, wij krijgen er stress van.
+    - Mijn puppy doet het prima op de hondenschool, maar zodra we ons rondje door de wijk lopen, heeft hij bananen in zijn oren.
+    - Ik zie dat mijn pup me wel hoort, maar ik lijk niet tot hem door te dringen.
   punten_titel: "In dit traject werken we aan:"
   punten:
-    - "Basiscommando's in diverse situaties: thuis, in de wijk, in het bos, op drukke plekken"
-    - Hondentaal leren lezen, zodat je je pup beter begeleidt in nieuwe situaties
+    - "De belangrijkste basiscommando's in diverse situaties: thuis, in de wijk, in het bos, op drukke plekken"
+    - Leren lezen en begrijpen van jouw hond en hondentaal — zodat je je pup beter begeleidt in nieuwe of moeilijke situaties
     - Prikkelbeheersing en het inbouwen van rustmomenten, thuis én buiten
-    - "Maatwerk: stressreductie, natuurlijke drijfveren of een passende hondensport"
-    - Video-analyse, ook van momenten waar ik niet bij ben
+    - "Maatwerk op basis van wat jouw pup nodig heeft: extra oefenen op commando's, stressreductie, natuurlijke drijfveren leren begrijpen of starten met een passende hondensport"
+    - Video-analyse als vast onderdeel — ik film hoe jij met je pup traint en geef gerichte feedback, ook op situaties waar ik niet bij ben
   knoppen:
     - tekst: Vraag naar de mogelijkheden
       link: contact.html
@@ -54,19 +58,24 @@
   foto: images/hond-tramhalte.jpg
   foto_alt: Hond traint ontspannen bij een tramhalte in de stad
   intro: >-
-    Voor honden én eigenaren die ergens tegenaan lopen in het dagelijks leven.
-    We kijken samen wat jij en jouw hond nodig hebben — en gaan daarmee aan de slag.
+    Voor honden én eigenaren die ergens tegenaan lopen in het dagelijks leven. Of het
+    nu gaat om meer rust thuis, omgaan met stress op de wandeling, een hondensport
+    ontdekken of werken aan probleemgedrag — we kijken samen wat jij en jouw hond nodig
+    hebben. Het traject is volledig maatwerk: losse lessen of pakketten van 5 of 10
+    lessen, afhankelijk van de casus.
   herken:
-    - Mijn hond is thuis super relaxed, maar buiten wordt hij hyper.
-    - Ik wil veel meer met ontspanning met mijn hond op stap.
-  punten_titel: "In dit traject werken we aan:"
+    - Mijn hond is thuis super relaxed, maar zodra we gaan wandelen wordt hij hyper.
+    - Ik kan niet (meer) ontspannen wandelen met de hond, want hij trekt altijd maar aan de lijn.
+    - Op de hondenschool doet hij het perfect, maar zodra we gaan wandelen heeft hij bananen in zijn oren.
+    - Ik zou mijn hond zo graag overal mee naartoe nemen, maar durf dat nu niet.
+  punten_titel: "Afhankelijk van je vraag werken we aan:"
   punten:
-    - "(Basis)commando's trainen of perfectioneren in allerlei situaties"
+    - "Het trainen of perfectioneren van diverse (basis)commando's in allerlei situaties"
     - Meer rust brengen, thuis of onderweg
     - Ontdekken welke hondensport bij jullie past
     - Omgaan met stress tijdens het wandelen of bij specifieke triggers
     - Begeleiding bij probleemgedrag
-    - Video-analyse als vast onderdeel — zodat jij aandacht hebt voor je hond, en ik voor jou
+    - Video-analyse als vast onderdeel — zodat jij tijdens de training echt aandacht hebt voor je hond, en ik voor jou
   knoppen:
     - tekst: Vraag naar de mogelijkheden
       link: contact.html
