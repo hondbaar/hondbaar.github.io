@@ -1,0 +1,23 @@
+title: Hondbaar
+description: Welzijnsgerichte 1-op-1 coaching voor baas en hond in regio Ede.
+email: hondbaar@hondbaar.nl
+lang: nl
+
+# URL-instellingen (GitHub Pages met eigen domein)
+url: "https://hondbaar.nl"
+baseurl: ""
+
+# Geen Jekyll-thema: we leveren onze eigen, al-gecompileerde CSS aan.
+theme: null
+
+# Sass-bronbestanden van het template niet verwerken; we gebruiken de
+# kant-en-klare assets/css/main.css rechtstreeks.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - assets/sass
+
+# We gebruiken geen automatische collections/posts
+plugins: []
