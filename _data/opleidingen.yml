@@ -1,0 +1,30 @@
+# Opleidingen en bijscholing — over-pagina.
+# Voeg een rij toe met opleiding/aanbieder/jaar.
+
+vakopleiding:
+  - opleiding: Kynologisch Instructeur
+    aanbieder: Tinley Academie
+    jaar: "2023"
+  - opleiding: Cursus Stressmanagement bij honden
+    aanbieder: Dr. Else Verbeek · Amazing Animal Minds
+    jaar: 2026 — in opleiding
+  - opleiding: Caring Human Code
+    aanbieder: Nordic School for Dog Professionals
+    jaar: 2026 — in opleiding
+
+specialisaties:
+  - cursus: Webinar BAT (Behavior Adjustment Training)
+    aanbieder: Monique Bladder
+    jaar: "2024"
+  - cursus: Webinar 'Uitvallende hond'
+    aanbieder: Henriëtte Jordens
+    jaar: "2024"
+  - cursus: Zelfleiderschap voor hondenverzorgers
+    aanbieder: De Bolster
+    jaar: "2025"
+  - cursus: Masterclass uitvallende hond
+    aanbieder: Monique Bladder
+    jaar: "2025"
+  - cursus: Cursus 'Passeren kun je leren'
+    aanbieder: Henriëtte Jordens
+    jaar: "2025"

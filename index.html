@@ -18,7 +18,7 @@ permalink: /
 									<li><a href="trajecten.html" class="button">Bekijk de trajecten</a></li>
 									<li><a href="contact.html" class="button">Neem contact op</a></li>
 								</ul>
-								<p class="tagline">Dierbaar · Zichtbaar · Voelbaar</p>
+								<p class="tagline">{{ site.data.site.tagline }}</p>
 							</article>
 
 						<!-- Herken je dit? -->
@@ -55,21 +55,13 @@ permalink: /
 									<p>Geen trucjes op een afgesloten veld, maar leren in de situaties waar je het dagelijks nodig hebt.</p>
 								</header>
 								<div class="row">
+									{% for pijler in site.data.pijlers.aanpak %}
 									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-route"></span>
-										<h3>In echte situaties</h3>
-										<p>We trainen daar waar het misgaat én waar het moet landen: in de wijk, op het terras, bij het station. Gedrag dat blijft hangen.</p>
+										<span class="icon solid major {{ pijler.icoon }}"></span>
+										<h3>{{ pijler.titel }}</h3>
+										<p>{{ pijler.tekst }}</p>
 									</div>
-									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-video"></span>
-										<h3>Met video-analyse</h3>
-										<p>Tijdens de les film ik mee, zodat jij alle aandacht voor je hond hebt. Achteraf bekijken we samen wat er gebeurt — en zie je het echt.</p>
-									</div>
-									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-hand-holding-heart"></span>
-										<h3>Coaching voor jou</h3>
-										<p>Een hond verandert als zijn mens verandert. Daarom leer jij je hond aanvoelen, lezen en begeleiden — dat is waar duurzame verandering begint.</p>
-									</div>
+									{% endfor %}
 								</div>
 							</section>
 
@@ -81,38 +73,16 @@ permalink: /
 									<p>Van een stevige puppystart tot maatwerk voor je volwassen hond, en van muilkorftraining tot advies bij de aanschaf van een hond — er is altijd een passende vorm.</p>
 								</header>
 								<div class="row">
+									{% for traject in site.data.trajecten %}
 									<div class="col-6 col-12-medium">
-										<a class="card" href="trajecten.html#puppy">
-											<span class="icon solid major fa-paw"></span>
-											<h3>Puppytraject</h3>
-											<p>Een fijne start met basiscommando's, rust, prikkelbeheersing en hondentaal leren lezen. Startpakket van 5 lessen, uitbreidbaar.</p>
+										<a class="card" href="{{ traject.kaart.link }}">
+											<span class="icon solid major {{ traject.icoon }}"></span>
+											<h3>{{ traject.kaart.titel }}</h3>
+											<p>{{ traject.kaart.tekst }}</p>
 											<span class="card-link">Lees meer</span>
 										</a>
 									</div>
-									<div class="col-6 col-12-medium">
-										<a class="card" href="trajecten.html#maatwerk">
-											<span class="icon solid major fa-dog"></span>
-											<h3>Maatwerk volwassen hond</h3>
-											<p>Loop je ergens tegenaan — van lijntrekken tot uitvalgedrag? Samen kijken we wat jij en je hond nodig hebben.</p>
-											<span class="card-link">Lees meer</span>
-										</a>
-									</div>
-									<div class="col-6 col-12-medium">
-										<a class="card" href="muilkorf.html">
-											<span class="icon solid major fa-shield-alt"></span>
-											<h3>Muilkorftraining</h3>
-											<p>Positief en rustig leren dat de muilkorf oké is — handig voor dierenarts, vervoer of vakantie. Inclusief passessie.</p>
-											<span class="card-link">Lees meer</span>
-										</a>
-									</div>
-									<div class="col-6 col-12-medium">
-										<a class="card" href="trajecten.html#videobel">
-											<span class="icon solid major fa-video"></span>
-											<h3>Videobelsessie</h3>
-											<p>Op zoek naar een hond? In 30-45 minuten bespreken we welke hond past bij jou en je situatie. Inclusief voorbereiding.</p>
-											<span class="card-link">Lees meer</span>
-										</a>
-									</div>
+									{% endfor %}
 								</div>
 								<ul class="actions">
 									<li><a href="trajecten.html" class="button">Bekijk alle trajecten</a></li>

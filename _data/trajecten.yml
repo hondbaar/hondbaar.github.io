@@ -1,0 +1,123 @@
+# Alle trajecten op één plek.
+# Worden gebruikt op de trajecten-pagina (volledige beschrijving) én op de
+# homepage (de korte 'kaart'-versie). Pas je hier iets aan, dan verandert het
+# op beide plekken mee.
+#
+# Velden per traject:
+#   id        : anker op de trajecten-pagina (#id) — niet wijzigen i.v.m. links
+#   icoon     : Font Awesome-icoon (bv. fa-paw)
+#   titel     : kop op de trajecten-pagina
+#   meta      : labeltekst met duur/prijs
+#   intro     : inleidende alinea
+#   herken    : lijst met herkenbare uitspraken (optioneel)
+#   punten_titel / punten : opsomming van wat het traject biedt
+#   knoppen   : knoppen onder het traject (tekst + link)
+#   kaart     : korte versie voor de homepage (kop, tekst, link)
+
+- id: puppy
+  icoon: fa-paw
+  titel: Puppytraject
+  meta: Startpakket 5 lessen · uitbreidbaar
+  intro: >-
+    Een fijne start is goud waard. In het puppytraject werken we aan een stevige
+    basis: opvoeding, prikkelbeheersing, rust én leren begrijpen wat jouw pup je vertelt.
+  herken:
+    - Mijn puppy is buiten met van alles bezig, behalve met mij.
+    - Sinds we de pup hebben is het chaos in huis.
+  punten_titel: "In dit traject werken we aan:"
+  punten:
+    - "Basiscommando's in diverse situaties: thuis, in de wijk, in het bos, op drukke plekken"
+    - Hondentaal leren lezen, zodat je je pup beter begeleidt in nieuwe situaties
+    - Prikkelbeheersing en het inbouwen van rustmomenten, thuis én buiten
+    - "Maatwerk: stressreductie, natuurlijke drijfveren of een passende hondensport"
+    - Video-analyse, ook van momenten waar ik niet bij ben
+  knoppen:
+    - tekst: Vraag naar de mogelijkheden
+      link: contact.html
+  kaart:
+    titel: Puppytraject
+    tekst: >-
+      Een fijne start met basiscommando's, rust, prikkelbeheersing en hondentaal
+      leren lezen. Startpakket van 5 lessen, uitbreidbaar.
+    link: trajecten.html#puppy
+
+- id: maatwerk
+  icoon: fa-dog
+  titel: Maatwerk voor volwassen honden
+  meta: Maatwerk · losse lessen of pakket
+  intro: >-
+    Voor honden én eigenaren die ergens tegenaan lopen in het dagelijks leven.
+    We kijken samen wat jij en jouw hond nodig hebben — en gaan daarmee aan de slag.
+  herken:
+    - Mijn hond is thuis super relaxed, maar buiten wordt hij hyper.
+    - Ik wil veel meer met ontspanning met mijn hond op stap.
+  punten_titel: "In dit traject werken we aan:"
+  punten:
+    - "(Basis)commando's trainen of perfectioneren in allerlei situaties"
+    - Meer rust brengen, thuis of onderweg
+    - Ontdekken welke hondensport bij jullie past
+    - Omgaan met stress tijdens het wandelen of bij specifieke triggers
+    - Begeleiding bij probleemgedrag
+    - Video-analyse als vast onderdeel — zodat jij aandacht hebt voor je hond, en ik voor jou
+  knoppen:
+    - tekst: Vraag naar de mogelijkheden
+      link: contact.html
+  kaart:
+    titel: Maatwerk volwassen hond
+    tekst: >-
+      Loop je ergens tegenaan — van lijntrekken tot uitvalgedrag? Samen kijken we
+      wat jij en je hond nodig hebben.
+    link: trajecten.html#maatwerk
+
+- id: muilkorf
+  icoon: fa-shield-alt
+  titel: Muilkorftraining
+  meta: Passessie 30 min · €20 · training op lestarief
+  intro: >-
+    Een muilkorf is een hulpmiddel — geen drama. We leren je hond op een positieve,
+    rustige manier dat de muilkorf veilig en oké is. Stap voor stap, op het tempo van je hond.
+  herken:
+    - Op vakantie moet hij in de gondel een muilkorf op, en dat vinden we niks.
+    - Dierenartsbezoeken vermijden we, want mijn hond krijgt er stress van.
+  punten_titel: "Wat dit traject biedt:"
+  punten:
+    - Positieve, stapsgewijze gewenning aan de muilkorf
+    - Geschikt voor puppy's én volwassen honden
+    - Handig voor dierenarts, openbaar vervoer, vakantie of als je hond graag dingen van straat eet
+    - De muilkorfpassessie met The Muzzle Movement kost €20 (30 min)
+    - Wil je daarna een of meer trainingen om de muilkorf rustig aan te leren? Die gaan op het gewone lestarief
+  knoppen:
+    - tekst: Meer over muilkorftraining
+      link: muilkorf.html
+    - tekst: Vraag naar de mogelijkheden
+      link: contact.html
+  kaart:
+    titel: Muilkorftraining
+    tekst: >-
+      Positief en rustig leren dat de muilkorf oké is — handig voor dierenarts,
+      vervoer of vakantie. Inclusief passessie.
+    link: muilkorf.html
+
+- id: videobel
+  icoon: fa-video
+  titel: Goed voorbereid een hond in huis halen
+  meta: Videobelsessie 30-45 min · €50
+  intro: >-
+    Ben jij op zoek naar een hond en vraag je je af hoe je je goed voorbereidt?
+    In een videobelsessie denk ik met je mee — vóórdat de hond er is.
+  punten_titel: "Wat we bespreken:"
+  punten:
+    - Waarom wil jij een hond, en wat past bij jouw leven?
+    - Pup of volwassen hond, rashond of rescue — of ben je nog zoekende?
+    - Handvatten voor het aanschafproces
+    - Samen op zoek naar de hond die bij jou en je situatie past
+    - Inclusief een vragenlijst vooraf, zodat we efficiënt werken
+  knoppen:
+    - tekst: Plan een videobelsessie
+      link: contact.html
+  kaart:
+    titel: Videobelsessie
+    tekst: >-
+      Op zoek naar een hond? In 30-45 minuten bespreken we welke hond past bij jou
+      en je situatie. Inclusief voorbereiding.
+    link: trajecten.html#videobel

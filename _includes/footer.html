@@ -2,9 +2,9 @@
 					<footer id="footer">
 						<section class="split contact">
 							<section class="alt">
-								<h3>Werkgebied</h3>
-								<p>Ede en omstreken<br />
-								Lessen op locatie</p>
+								<h3>{{ site.data.site.footer.werkgebied_titel }}</h3>
+								<p>{% for regel in site.data.site.footer.werkgebied_regels %}{{ regel }}{% unless forloop.last %}<br />
+								{% endunless %}{% endfor %}</p>
 							</section>
 							<section>
 								<h3>E-mail</h3>
@@ -20,7 +20,7 @@
 				<!-- Copyright -->
 					<div id="copyright">
 						<ul>
-							<li>&copy; {{ 'now' | date: "%Y" }} Hondbaar · KvK [nummer]</li>
+							<li>&copy; {{ 'now' | date: "%Y" }} Hondbaar · KvK {{ site.data.site.footer.kvk }}</li>
 							<li>Welzijnsgerichte coaching voor baas en hond</li>
 							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 						</ul>

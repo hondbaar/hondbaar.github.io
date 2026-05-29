@@ -54,21 +54,13 @@ permalink: /over.html
 									<h2>Dierbaar · Zichtbaar · Voelbaar</h2>
 								</header>
 								<div class="row">
+									{% for w in site.data.pijlers.waarden %}
 									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-heart"></span>
-										<h3>Dierbaar</h3>
-										<p>Jouw hond is geen project, maar een gezinslid. Welzijn en de band tussen jullie staan altijd voorop.</p>
+										<span class="icon solid major {{ w.icoon }}"></span>
+										<h3>{{ w.titel }}</h3>
+										<p>{{ w.tekst }}</p>
 									</div>
-									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-eye"></span>
-										<h3>Zichtbaar</h3>
-										<p>Met video-analyse maken we zichtbaar wat anders ongezien blijft — in het gedrag van je hond én in jouw begeleiding.</p>
-									</div>
-									<div class="col-4 col-12-medium pillar">
-										<span class="icon solid major fa-hand-holding-heart"></span>
-										<h3>Voelbaar</h3>
-										<p>Het resultaat voel je in het dagelijks leven: meer rust, meer vertrouwen, en meer plezier samen op pad.</p>
-									</div>
+									{% endfor %}
 								</div>
 							</section>
 
@@ -87,10 +79,9 @@ permalink: /over.html
 											<tr><th>Opleiding</th><th>Aanbieder</th><th>Jaar</th></tr>
 										</thead>
 										<tbody>
-											<tr><td>Kynologisch Instructeur</td><td>Tinley Academie</td><td>2023</td></tr>
-											<tr><td>Cursus Stressmanagement bij honden</td><td>Dr. Else Verbeek · Amazing Animal Minds</td><td>2026 — in opleiding</td></tr>
-											<tr><td>Caring Human Code</td><td>Nordic School for Dog Professionals</td><td>2026 — in opleiding</td></tr>
-										</tbody>
+										{% for r in site.data.opleidingen.vakopleiding %}<tr><td>{{ r.opleiding }}</td><td>{{ r.aanbieder }}</td><td>{{ r.jaar }}</td></tr>
+										{% endfor %}
+									</tbody>
 									</table>
 								</div>
 
@@ -101,12 +92,9 @@ permalink: /over.html
 											<tr><th>Cursus / webinar</th><th>Aanbieder</th><th>Jaar</th></tr>
 										</thead>
 										<tbody>
-											<tr><td>Webinar BAT (Behavior Adjustment Training)</td><td>Monique Bladder</td><td>2024</td></tr>
-											<tr><td>Webinar 'Uitvallende hond'</td><td>Henriëtte Jordens</td><td>2024</td></tr>
-											<tr><td>Zelfleiderschap voor hondenverzorgers</td><td>De Bolster</td><td>2025</td></tr>
-											<tr><td>Masterclass uitvallende hond</td><td>Monique Bladder</td><td>2025</td></tr>
-											<tr><td>Cursus 'Passeren kun je leren'</td><td>Henriëtte Jordens</td><td>2025</td></tr>
-										</tbody>
+										{% for r in site.data.opleidingen.specialisaties %}<tr><td>{{ r.cursus }}</td><td>{{ r.aanbieder }}</td><td>{{ r.jaar }}</td></tr>
+										{% endfor %}
+									</tbody>
 									</table>
 								</div>
 							</section>
