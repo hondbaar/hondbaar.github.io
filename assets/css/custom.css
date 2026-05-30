@@ -126,14 +126,40 @@ button.primary:hover,
 	letter-spacing: 0.02em;
 }
 
-/* Kleur-logo bovenaan het content-paneel (homepage) */
-.brand-logo {
-	text-align: center;
-	margin: 0 0 1.5rem 0;
+/* Beeldlogo in de header (binnenpagina's): vervangt het tekst-blok met rand */
+#header .logo.logo-image {
+	border: 0 !important;
+	padding: 0 !important;
+	background: transparent !important;
+	line-height: 0;
 }
-.brand-logo img {
-	width: 100%;
-	max-width: 360px;
+#header .logo.logo-image picture,
+#header .logo.logo-image img {
+	display: block;
+}
+#header .logo.logo-image img {
+	width: auto;
+	max-width: 80vw;
+	height: 4.5rem;
+}
+#header .logo.logo-image:hover {
+	border: 0 !important;
+}
+@media screen and (max-width: 736px) {
+	#header .logo.logo-image img {
+		height: 3.5rem;
+	}
+}
+
+/* Logo bovenaan de hero (homepage), transparante achtergrond */
+.intro-logo {
+	margin: 0 0 1.5rem 0;
+	text-align: center;
+}
+.intro-logo img {
+	width: auto;
+	max-width: 90%;
+	max-height: 30vh;
 	height: auto;
 }
 
@@ -742,4 +768,20 @@ details.faq .faq-body {
 		background-color: rgba(56, 38, 74, 0.92);
 		color: #f0e6d6;
 	}
+}
+
+/* ===========================================================
+   Header met beeldlogo — compacter dan het oude tekst-blok
+   =========================================================== */
+/* Binnenpagina's: kleinere headerhoogte (logo is ~4.5rem) */
+#wrapper > #header {
+	height: auto;
+	min-height: 0;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+/* Homepage: het logo staat al groot in de intro, dus de aparte header
+   eronder verbergen we (voorkomt dubbel logo en een lege balk). */
+#intro + #header {
+	display: none;
 }
