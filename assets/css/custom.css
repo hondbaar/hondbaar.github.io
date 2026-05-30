@@ -620,10 +620,19 @@ details.faq .faq-body {
 		url("../../images/overlay.png"),
 		linear-gradient(0deg, rgba(42, 27, 53, 0.45), rgba(42, 27, 53, 0.45)),
 		url("../../images/bg.jpg") !important;
+	background-size: auto, auto, cover !important;
+	background-position: center, center, center 32% !important;
 }
 #intro h1,
 #intro p {
 	text-shadow: 0 1px 12px rgba(42, 27, 53, 0.55);
+}
+/* Hero-tekst op mobiel: geforceerde regelafbreking weg en ruimere
+   regelhoogte, zodat de regels netjes onder elkaar staan i.p.v. overlappen */
+#intro p br { display: none; }
+@media screen and (max-width: 736px) {
+	#intro h1 { font-size: 2rem; line-height: 1.25; min-height: 0; }
+	#intro p { font-size: 1.1rem; line-height: 1.55; }
 }
 
 /* ===========================================================
@@ -699,8 +708,30 @@ details.faq .faq-body {
 		background-color: var(--teal) !important;
 		color: #2A1B35 !important;
 	}
-	/* Mobiel schuifpaneel: subtiel lichter zodat het afsteekt */
+	/* Mobiel schuifpaneel: donker met crème tekst (anders onleesbaar) */
 	#navPanel {
-		background: #38264a;
+		background: #2A1B35;
+	}
+	#navPanel .links li {
+		border-top-color: rgba(240, 230, 214, 0.1);
+	}
+	#navPanel .links li a,
+	#navPanel .links li.nav-logo a {
+		color: #f0e6d6 !important;
+	}
+	#navPanel .links li a:hover {
+		color: var(--teal) !important;
+	}
+	#navPanel .close {
+		color: rgba(240, 230, 214, 0.6);
+	}
+	#navPanel .close:hover {
+		color: #f0e6d6;
+	}
+	/* Hamburger-knop leesbaar op donker */
+	#navPanelToggle { color: #f0e6d6; }
+	#navPanelToggle.alt {
+		background-color: rgba(56, 38, 74, 0.92);
+		color: #f0e6d6;
 	}
 }
