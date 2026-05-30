@@ -566,6 +566,22 @@ details.faq .faq-body {
 #footer .contact .icon {
 	color: var(--teal) !important;
 }
+/* Footer-kolommen netjes als blok: kop bóven de tekst (het template zette
+   de kop in een smalle 6rem-kolom náást de tekst, wat overlapte). */
+#footer > section.split.contact > section {
+	display: block;
+	align-items: initial;
+	padding: 2rem 2.5rem;
+}
+#footer > section.split.contact > section > :first-child {
+	width: auto;
+}
+#footer > section.split.contact > section.alt > :last-child {
+	margin-top: 0;
+}
+#footer h3 {
+	margin-bottom: 0.5rem;
+}
 #copyright {
 	background-color: var(--aubergine) !important;
 	color: rgba(240, 230, 214, 0.45) !important;
@@ -591,6 +607,7 @@ details.faq .faq-body {
 .image.main,
 .image.fit {
 	text-align: center;
+	margin: 2.5rem 0 !important;
 }
 .image.main img,
 .image.fit img {
