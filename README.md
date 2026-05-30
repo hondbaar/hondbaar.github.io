@@ -13,6 +13,7 @@ Website voor **Hondbaar** — welzijnsgerichte 1-op-1 coaching voor baas en hond
 | `maatwerk.html` | Maatwerk volwassen hond (`layout: traject`) |
 | `videobelsessie.html` | Videobelsessie (`layout: traject`) |
 | `muilkorf.html` | Muilkorftraining & passessies |
+| `muilkorfpassessie.html` | Muilkorfpassessie (losse pagina, `layout: traject`) |
 | `tarieven.html` | Tarievenoverzicht |
 | `over.html` | Over Hondbaar |
 | `contact.html` | Contact + contactformulier |
