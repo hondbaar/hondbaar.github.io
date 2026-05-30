@@ -9,6 +9,9 @@
 	--purple: #3D2A4E;
 	--teal: #2D7A7B;
 	--teal-dark: #246364;
+	/* Donkerder teal voor teal tekst op de crème achtergrond — haalt het
+	   WCAG AA-contrast van 4.5:1 (de merk-teal #2D7A7B haalt dat net niet). */
+	--teal-text: #1f5859;
 	--cream: #F0E6D6;
 	--cream-soft: #f7f1e6;
 	--aubergine: #2A1B35;
@@ -55,8 +58,8 @@ strong, b {
 
 /* Links in de tekst */
 #main a {
-	color: var(--teal);
-	border-bottom-color: rgba(45, 122, 123, 0.4);
+	color: var(--teal-text);
+	border-bottom-color: rgba(31, 88, 89, 0.45);
 }
 #main a:hover {
 	color: var(--teal-dark);
@@ -66,7 +69,7 @@ strong, b {
    decoratieve horizontale lijnen van het template (die liepen bij
    langere of omgebroken tekst dwars door de tekst heen). */
 .post > header.major .date {
-	color: var(--teal);
+	color: var(--teal-text);
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	font-size: 0.7rem;
@@ -177,7 +180,7 @@ button.primary:hover,
 	letter-spacing: 0.25em;
 	font-size: 0.6rem;
 	font-weight: 600;
-	color: var(--accent);
+	color: var(--teal-text);
 	margin: 0 0 1rem 0;
 }
 
@@ -187,7 +190,7 @@ button.primary:hover,
 	letter-spacing: 0.28em;
 	font-size: 0.7rem;
 	font-weight: 600;
-	color: var(--teal);
+	color: var(--teal-text);
 }
 
 /* Quote-lijsten ("Herken je dit?") */
@@ -229,7 +232,7 @@ button.primary:hover,
 .traject .meta {
 	display: inline-block;
 	background: rgba(45, 122, 123, 0.12);
-	color: #246364;
+	color: var(--teal-text);
 	font-weight: 600;
 	font-size: 0.7rem;
 	letter-spacing: 0.05em;
@@ -283,7 +286,7 @@ a.card:hover h3 {
 	font-size: 0.8rem;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-	color: var(--accent);
+	color: var(--teal-text);
 }
 .card-link::after {
 	content: " \2192";
@@ -323,7 +326,7 @@ details.faq[open] summary::after {
 	content: "\2013";
 }
 details.faq summary:hover {
-	color: var(--accent);
+	color: var(--teal-text);
 }
 details.faq .faq-body {
 	padding: 0 1.4rem 1.3rem 1.4rem;
