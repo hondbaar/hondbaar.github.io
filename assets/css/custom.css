@@ -624,3 +624,65 @@ details.faq .faq-body {
 #intro p {
 	text-shadow: 0 1px 12px rgba(42, 27, 53, 0.55);
 }
+
+/* ===========================================================
+   Donkere modus (prefers-color-scheme: dark)
+   Het crème contentvlak wordt aubergine; tekst wordt crème.
+   Nav, footer en hero zijn al donker en blijven ongewijzigd.
+   =========================================================== */
+@media (prefers-color-scheme: dark) {
+
+	:root {
+		--fg: #ece6da;                       /* bodytekst → zacht crème */
+		--purple: #f5efe3;                   /* koppen → bijna wit crème */
+		--fg-light: rgba(240, 230, 214, 0.6);
+		--accent: #57b4b6;                   /* teal iets lichter voor contrast */
+		--teal: #57b4b6;
+		--teal-dark: #74c6c8;
+		--border: rgba(240, 230, 214, 0.15);
+	}
+
+	/* Contentvlak → aubergine */
+	#main {
+		background-color: var(--aubergine) !important;
+	}
+
+	/* Panelen die wit/licht waren → iets lichter dan de achtergrond */
+	.card,
+	details.faq,
+	.quote-list li {
+		background: #38264a;
+	}
+
+	/* Tekstlinks in de content */
+	#main a {
+		color: var(--teal);
+		border-bottom-color: rgba(87, 180, 182, 0.4);
+	}
+	#main a:hover {
+		color: var(--teal-dark);
+	}
+
+	/* Traject-label (tarief) */
+	.traject .meta {
+		background: rgba(87, 180, 182, 0.15);
+		color: #8fd3d4;
+	}
+
+	/* Juridische 'let op'-blokken */
+	.legal .note {
+		background: rgba(87, 180, 182, 0.1);
+	}
+
+	/* Formuliervelden: lichtere placeholder en rand */
+	#main input,
+	#main select,
+	#main textarea {
+		color: var(--fg);
+	}
+	#main ::-webkit-input-placeholder { color: rgba(240, 230, 214, 0.45); }
+	#main :-moz-placeholder { color: rgba(240, 230, 214, 0.45); }
+	#main ::-moz-placeholder { color: rgba(240, 230, 214, 0.45); }
+	#main :-ms-input-placeholder { color: rgba(240, 230, 214, 0.45); }
+
+}
