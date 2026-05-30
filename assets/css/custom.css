@@ -560,13 +560,14 @@ details.faq .faq-body {
 	border-radius: 6px;
 }
 
-/* Afbeelding binnen een traject-blok: gecentreerd, alle tekst eronder */
-.traject .traject-foto {
+/* Afbeelding bij een traject (overzicht én losse pagina's): gecentreerd,
+   alle tekst eronder, nooit hoger dan het scherm */
+.traject-foto {
 	display: block;
 	margin: 0 0 1.5rem 0;
 	text-align: center;
 }
-.traject .traject-foto img {
+.traject-foto img {
 	width: auto;
 	max-width: 100%;
 	max-height: 70vh;
@@ -582,7 +583,7 @@ details.faq .faq-body {
 @media screen and (max-width: 736px) {
 	.image.main img,
 	.image.fit img,
-	.traject .traject-foto img {
+	.traject-foto img {
 		max-height: 60vh;
 	}
 }
@@ -685,4 +686,21 @@ details.faq .faq-body {
 	#main ::-moz-placeholder { color: rgba(240, 230, 214, 0.45); }
 	#main :-ms-input-placeholder { color: rgba(240, 230, 214, 0.45); }
 
+
+	/* Uitklap-submenu: laat het paneel afsteken tegen de donkere achtergrond */
+	#nav ul.links li.has-submenu .submenu {
+		background: #38264a;
+		border: 1px solid rgba(240, 230, 214, 0.12);
+	}
+	#nav ul.links li.has-submenu .submenu li {
+		border-top-color: rgba(240, 230, 214, 0.08);
+	}
+	#nav ul.links li.has-submenu .submenu li a:hover {
+		background-color: var(--teal) !important;
+		color: #2A1B35 !important;
+	}
+	/* Mobiel schuifpaneel: subtiel lichter zodat het afsteekt */
+	#navPanel {
+		background: #38264a;
+	}
 }
