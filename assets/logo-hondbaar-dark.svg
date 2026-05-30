@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Hondbaar — concept-hoofdlogo "Samen op pad"
+	Silhouet baas (donkerpaars) + hond (teal), vooruit gericht; woordmerk + tagline.
+	Conform design briefing. Eenvoudige uitwerking, bedoeld als concept —
+	te vervangen door het definitieve ontwerp van de vormgever.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" width="520" height="200" role="img" aria-label="hondbaar — coaching voor baas en hond">
+	<defs>
+		<style>
+			.purple { fill: #F0E6D6; }
+			.teal   { fill: #74C6C8; }
+			.wordmark { fill: #F0E6D6; font-family: 'Poppins','Segoe UI',Helvetica,Arial,sans-serif; font-weight: 500; }
+			.tagline  { fill: #74C6C8; font-family: 'Poppins','Segoe UI',Helvetica,Arial,sans-serif; font-weight: 600; letter-spacing: 4px; }
+		</style>
+	</defs>
+
+	<!-- Silhouet-compositie: baas + hond samen vooruit -->
+	<g transform="translate(20,30)">
+		<!-- Pad onder de voeten, subtiel teal -->
+		<path d="M0,150 Q70,138 150,150" fill="none" stroke="#74C6C8" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+		<!-- Baas (donkerpaars) -->
+		<g class="purple">
+			<circle cx="60" cy="22" r="13"/>
+			<!-- romp + benen in beweging -->
+			<path d="M60,36
+				C66,36 70,42 70,52
+				L72,92
+				L84,138
+				C85,143 79,146 76,141
+				L64,100
+				L58,100
+				L50,140
+				C48,145 41,143 42,137
+				L50,92
+				L50,54
+				C50,43 54,36 60,36 Z"/>
+			<!-- arm naar voren, richting hond -->
+			<path d="M66,58 L96,74 C100,76 98,82 93,81 L64,70 Z"/>
+		</g>
+
+		<!-- Hond (teal), vooruit, opgeheven staart, geen halsband/riem -->
+		<g class="teal">
+			<!-- lijf -->
+			<ellipse cx="120" cy="116" rx="26" ry="15"/>
+			<!-- borst/nek -->
+			<path d="M138,110 C150,104 152,92 146,86 C150,96 144,106 138,110 Z"/>
+			<!-- kop -->
+			<circle cx="150" cy="92" r="11"/>
+			<!-- snuit -->
+			<path d="M158,92 L170,90 L168,98 L158,97 Z"/>
+			<!-- oor -->
+			<path d="M146,84 L150,72 L156,84 Z"/>
+			<!-- poten -->
+			<rect x="102" y="126" width="5" height="22" rx="2.5"/>
+			<rect x="114" y="128" width="5" height="20" rx="2.5"/>
+			<rect x="128" y="128" width="5" height="20" rx="2.5"/>
+			<rect x="138" y="126" width="5" height="22" rx="2.5"/>
+			<!-- opgeheven, natuurlijk gekromde staart -->
+			<path d="M96,112 C84,108 82,96 90,92 C86,100 92,108 100,108 Z"/>
+		</g>
+	</g>
+
+	<!-- Woordmerk + tagline -->
+	<g transform="translate(210,0)">
+		<text class="wordmark" x="0" y="118" font-size="62">hondbaar</text>
+		<!-- dunne teal scheidingslijn -->
+		<line x1="3" y1="138" x2="297" y2="138" stroke="#74C6C8" stroke-width="1.5" opacity="0.8"/>
+		<text class="tagline" x="3" y="162" font-size="13">DIERBAAR · ZICHTBAAR · VOELBAAR</text>
+	</g>
+</svg>
