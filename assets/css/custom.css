@@ -162,6 +162,13 @@ button.primary:hover,
 	max-height: 30vh;
 	height: auto;
 }
+/* Op mobiel het logo naar boven duwen (de intro lijnt onderaan uit),
+   zodat het bóven de hond staat en niet eroverheen. */
+@media screen and (max-width: 736px) {
+	.intro-logo {
+		margin-bottom: auto;
+	}
+}
 
 /* Eyebrow boven koppen */
 .eyebrow {
