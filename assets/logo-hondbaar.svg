@@ -67,6 +67,6 @@
 		<text class="wordmark" x="0" y="118" font-size="62">hondbaar</text>
 		<!-- dunne teal scheidingslijn -->
 		<line x1="3" y1="138" x2="297" y2="138" stroke="#2D7A7B" stroke-width="1.5" opacity="0.8"/>
-		<text class="tagline" x="3" y="162" font-size="13">DIERBAAR · ZICHTBAAR · VOELBAAR</text>
+		<text class="tagline" x="3" y="162" font-size="13">DIERBAAR · VOELBAAR · ZICHTBAAR</text>
 	</g>
 </svg>

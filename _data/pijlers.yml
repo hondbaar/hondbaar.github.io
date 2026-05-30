@@ -25,16 +25,16 @@ waarden:
     tekst: >-
       Jouw hond is geen project, maar een gezinslid. Welzijn en de band tussen jullie
       staan altijd voorop.
-  - icoon: fa-eye
-    titel: Zichtbaar
-    tekst: >-
-      Met video-analyse maken we zichtbaar wat anders ongezien blijft — in het gedrag
-      van je hond én in jouw begeleiding.
   - icoon: fa-hand-holding-heart
     titel: Voelbaar
     tekst: >-
       Het resultaat voel je in het dagelijks leven: meer rust, meer vertrouwen, en
       meer plezier samen op pad.
+  - icoon: fa-eye
+    titel: Zichtbaar
+    tekst: >-
+      Met video-analyse maken we zichtbaar wat anders ongezien blijft — in het gedrag
+      van je hond én in jouw begeleiding.
 
 # Drie pijlers muilkorf — muilkorf-pagina
 muilkorf:
