@@ -544,6 +544,22 @@ details.faq .faq-body {
 /* ===========================================================
    Foto's
    =========================================================== */
+/* Content-foto's (.image.main / .image.fit): nooit groter dan het scherm,
+   gecentreerd en met een maximale hoogte, zodat ook staande foto's op
+   mobiel volledig zichtbaar blijven. */
+.image.main,
+.image.fit {
+	text-align: center;
+}
+.image.main img,
+.image.fit img {
+	width: auto !important;
+	max-width: 100%;
+	max-height: 70vh;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+
 /* Afbeelding binnen een traject-blok: gecentreerd, alle tekst eronder */
 .traject .traject-foto {
 	display: block;
@@ -553,13 +569,22 @@ details.faq .faq-body {
 .traject .traject-foto img {
 	width: auto;
 	max-width: 100%;
-	max-height: 460px;
+	max-height: 70vh;
 	border-radius: 6px;
 	display: inline-block;
 }
 /* Meta-label (tarief/duur) altijd als eigen regel onder de foto */
 .traject .meta {
 	clear: both;
+}
+
+/* Op mobiel de foto's iets compacter houden */
+@media screen and (max-width: 736px) {
+	.image.main img,
+	.image.fit img,
+	.traject .traject-foto img {
+		max-height: 60vh;
+	}
 }
 
 /* Algemene contentfoto (over-pagina e.d.) */
