@@ -62,12 +62,20 @@ strong, b {
 	color: var(--teal-dark);
 }
 
-/* Koppen: datum-eyebrow van de posts in teal */
+/* Eyebrow-label boven de koppen (.date): teal tekst, zonder de
+   decoratieve horizontale lijnen van het template (die liepen bij
+   langere of omgebroken tekst dwars door de tekst heen). */
 .post > header.major .date {
 	color: var(--teal);
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 0.7rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
 }
-.post > header.major .date::before {
-	background: var(--teal);
+.post > header.major .date::before,
+.post > header.major .date::after {
+	display: none !important;
 }
 
 /* ===========================================================
