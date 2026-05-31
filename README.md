@@ -16,6 +16,7 @@ Website voor **Hondbaar** — welzijnsgerichte 1-op-1 coaching voor baas en hond
 | `muilkorfpassessie.html` | Muilkorfpassessie (losse pagina, `layout: traject`) |
 | `tarieven.html` | Tarievenoverzicht |
 | `over.html` | Over Hondbaar |
+| `verantwoord-eigenaarschap.html` | Verantwoord eigenaarschap (vriend van VE) |
 | `contact.html` | Contact + contactformulier |
 | `privacy.html` | Privacyverklaring |
 | `voorwaarden.html` | Algemene voorwaarden |
