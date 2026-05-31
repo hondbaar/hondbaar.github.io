@@ -899,3 +899,15 @@ details.faq .faq-body {
 		height: 7rem;
 	}
 }
+
+/* ===========================================================
+   Contactformulier — verborgen verzend-iframe + bedankmelding
+   =========================================================== */
+.gform-target {
+	display: none;
+}
+.form-bedankt {
+	/* erft .note-styling (teal kader op licht vlak) */
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
