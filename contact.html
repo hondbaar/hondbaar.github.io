@@ -29,40 +29,52 @@ permalink: /contact.html
 
 									<div class="col-7 col-12-medium">
 										<h2>Stuur een bericht</h2>
+
+										<!-- Verborgen iframe: vangt de Google Forms-respons op zodat de
+										     bezoeker niet naar Google wordt doorgestuurd. -->
+										<iframe name="gform-target" class="gform-target" title="Formulierverzending"></iframe>
+
+										<!-- Bedankmelding (verschijnt na verzenden) -->
+										<div id="form-bedankt" class="form-bedankt note" hidden>
+											<strong>Bedankt voor het invullen!</strong> Je bericht is verstuurd. Ik neem zo snel mogelijk contact met je op — meestal binnen 1-2 werkdagen.
+										</div>
+
 										<!--
-											Het formulier is voorbereid voor Formspree.
-											Vervang "your-id" in de action hieronder door je eigen Formspree-form-ID
-											(maak gratis een form aan op https://formspree.io). Tot die tijd kun je
-											mensen ook gewoon naar hondbaar@hondbaar.nl laten mailen.
+											Het formulier stuurt de gegevens naar een Google Form.
+											De veld-namen (entry.XX…) horen bij dat Google Form; niet wijzigen.
+											Inzendingen komen binnen in het gekoppelde Google Form / de mailmelding.
 										-->
-										<form method="post" action="https://formspree.io/f/your-id">
+										<form id="contactform"
+											action="https://docs.google.com/forms/d/e/1FAIpQLSdA8yuCjjlr_MM9PkZEDVK3mVPINPjTQVwJwAms4PY8xohljw/formResponse"
+											method="post"
+											target="gform-target">
 											<div class="fields">
 												<div class="field half">
 													<label for="naam">Je naam</label>
-													<input type="text" name="naam" id="naam" required />
+													<input type="text" name="entry.1688495269" id="naam" required />
 												</div>
 												<div class="field half">
 													<label for="email">E-mailadres</label>
-													<input type="email" name="email" id="email" required />
+													<input type="email" name="entry.743337034" id="email" required />
 												</div>
 												<div class="field half">
 													<label for="telefoon">Telefoonnummer (optioneel)</label>
-													<input type="tel" name="telefoon" id="telefoon" />
+													<input type="tel" name="entry.1740066744" id="telefoon" />
 												</div>
 												<div class="field half">
 													<label for="onderwerp">Waar gaat het over?</label>
-													<select name="onderwerp" id="onderwerp">
+													<select name="entry.1293628682" id="onderwerp">
 														<option value="">- Kies -</option>
 														<option value="Puppytraject">Puppytraject</option>
-														<option value="Maatwerk volwassen hond">Maatwerk volwassen hond</option>
-														<option value="Muilkorftraining">Muilkorftraining</option>
+														<option value="Maatwerk">Maatwerk volwassen hond</option>
+														<option value="Muilkorfpassessie of training">Muilkorfpassessie of training</option>
 														<option value="Videobelsessie">Videobelsessie (toekomstige hond)</option>
 														<option value="Iets anders">Iets anders / weet ik nog niet</option>
 													</select>
 												</div>
 												<div class="field">
 													<label for="bericht">Je bericht</label>
-													<textarea name="bericht" id="bericht" rows="6" placeholder="Vertel kort waar je tegenaan loopt of wat je vraag is…" required></textarea>
+													<textarea name="entry.1515229766" id="bericht" rows="6" placeholder="Vertel kort waar je tegenaan loopt of wat je vraag is…" required></textarea>
 												</div>
 											</div>
 											<ul class="actions">
@@ -73,4 +85,27 @@ permalink: /contact.html
 									</div>
 								</div>
 							</article>
+
+						<script>
+							(function () {
+								var form = document.getElementById('contactform');
+								if (!form) return;
+								var bedankt = document.getElementById('form-bedankt');
+								form.addEventListener('submit', function () {
+									// Het formulier postt naar de verborgen iframe; we tonen direct
+									// de bedankmelding en verbergen het formulier. (We kunnen de
+									// Google-respons niet uitlezen, maar de inzending gaat door.)
+									setTimeout(function () {
+										form.style.display = 'none';
+										if (bedankt) {
+											bedankt.hidden = false;
+											bedankt.setAttribute('role', 'status');
+											bedankt.scrollIntoView({ behavior: 'smooth', block: 'center' });
+											bedankt.focus && bedankt.focus();
+										}
+									}, 300);
+								});
+							})();
+						</script>
+
 
