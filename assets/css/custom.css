@@ -966,3 +966,23 @@ details.faq .faq-body {
 	#main :-ms-input-placeholder { color: rgba(240, 230, 214, 0.6) !important; }
 	#main ::placeholder { color: rgba(240, 230, 214, 0.6) !important; }
 }
+
+/* ===========================================================
+   The Muzzle Movement — Affiliate Fitter badge
+   =========================================================== */
+.mm-badge {
+	margin: 1.5rem 0;
+	text-align: center;
+}
+.mm-badge img {
+	width: auto;
+	max-width: 100%;
+	height: 11rem;
+}
+/* Naast de tekst op bredere schermen */
+@media screen and (min-width: 737px) {
+	.mm-badge.float {
+		float: right;
+		margin: 0 0 1rem 2rem;
+	}
+}
