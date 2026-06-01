@@ -432,10 +432,14 @@ details.faq .faq-body {
 		color: #ffffff;
 		opacity: 0.85;
 	}
-	#nav ul.links li.nav-logo svg {
-		width: 2rem;
-		height: 2rem;
+	#nav ul.links li.nav-logo img {
+		width: auto;
+		height: 2.5rem;
 		display: block;
+	}
+	/* In de (donkere) balk: lichte variant tonen, kleurvariant verbergen */
+	#nav ul.links li.nav-logo .mark-color {
+		display: none;
 	}
 
 	/* zorg dat de homepage-intro niet achter de balk valt */
@@ -535,9 +539,16 @@ details.faq .faq-body {
 	display: inline-flex;
 	align-items: center;
 }
-#navPanel .links li.nav-logo svg {
-	width: 1.75rem;
-	height: 1.75rem;
+#navPanel .links li.nav-logo img {
+	width: auto;
+	height: 2rem;
+}
+/* Mobiel paneel is licht (wit/crème): toon de kleurvariant i.p.v. de lichte */
+#navPanel .links li.nav-logo .mark-light {
+	display: none;
+}
+#navPanel .links li.nav-logo .mark-color {
+	display: block;
 }
 
 /* ===========================================================
@@ -785,6 +796,9 @@ details.faq .faq-body {
 	#navPanel {
 		background: #2A1B35;
 	}
+	/* Donker paneel: weer de lichte logo-variant tonen */
+	#navPanel .links li.nav-logo .mark-light { display: block; }
+	#navPanel .links li.nav-logo .mark-color { display: none; }
 	#navPanel .links li {
 		border-top-color: rgba(240, 230, 214, 0.1);
 	}
