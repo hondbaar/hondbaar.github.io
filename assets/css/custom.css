@@ -826,12 +826,14 @@ details.faq .faq-body {
 /* ===========================================================
    Header met beeldlogo — compacter dan het oude tekst-blok
    =========================================================== */
-/* Binnenpagina's: kleinere headerhoogte (logo is ~4.5rem) */
+/* Binnenpagina's: header onder de vaste menubalk (3.5rem) + ruimte eronder.
+   Het logo staat op de achtergrondfoto, dus genoeg padding-top zodat het
+   niet achter de balk valt; de content (crème #main) komt er weer onder. */
 #wrapper > #header {
 	height: auto;
 	min-height: 0;
-	padding-top: 2.5rem;
-	padding-bottom: 2.5rem;
+	padding-top: 6rem;
+	padding-bottom: 3rem;
 }
 /* Homepage: het logo staat al groot in de intro, dus de aparte header
    eronder verbergen we (voorkomt dubbel logo en een lege balk). */
