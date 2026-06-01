@@ -911,3 +911,58 @@ details.faq .faq-body {
 	margin-top: 0;
 	margin-bottom: 2rem;
 }
+
+/* ===========================================================
+   Formuliervelden — duidelijk zichtbaar en leesbaar
+   (template-randen waren #eeeeee: nauwelijks zichtbaar op crème,
+    placeholders #909498: te laag contrast).
+   =========================================================== */
+#main label {
+	color: var(--purple);
+	font-weight: 600;
+}
+#main input[type="text"],
+#main input[type="email"],
+#main input[type="tel"],
+#main input[type="password"],
+#main select,
+#main textarea {
+	background: #ffffff;
+	border: solid 2px #b9b0a3;   /* zichtbare warme rand op crème */
+	color: var(--fg);
+	border-radius: 6px;
+}
+#main input[type="text"]:focus,
+#main input[type="email"]:focus,
+#main input[type="tel"]:focus,
+#main select:focus,
+#main textarea:focus {
+	border-color: var(--teal);
+	box-shadow: 0 0 0 1px var(--teal);
+}
+/* Placeholder-tekst leesbaar (WCAG AA) */
+#main ::-webkit-input-placeholder { color: #615a68 !important; opacity: 1; }
+#main ::-moz-placeholder { color: #615a68 !important; opacity: 1; }
+#main :-ms-input-placeholder { color: #615a68 !important; opacity: 1; }
+#main ::placeholder { color: #615a68 !important; opacity: 1; }
+
+/* Donkere modus: velden donker met lichte rand en tekst */
+@media (prefers-color-scheme: dark) {
+	#main label {
+		color: var(--cream);
+	}
+	#main input[type="text"],
+	#main input[type="email"],
+	#main input[type="tel"],
+	#main input[type="password"],
+	#main select,
+	#main textarea {
+		background: #38264a;
+		border-color: rgba(240, 230, 214, 0.4);
+		color: var(--cream);
+	}
+	#main ::-webkit-input-placeholder { color: rgba(240, 230, 214, 0.6) !important; }
+	#main ::-moz-placeholder { color: rgba(240, 230, 214, 0.6) !important; }
+	#main :-ms-input-placeholder { color: rgba(240, 230, 214, 0.6) !important; }
+	#main ::placeholder { color: rgba(240, 230, 214, 0.6) !important; }
+}
