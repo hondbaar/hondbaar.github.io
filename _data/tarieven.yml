@@ -14,6 +14,9 @@ tarieven:
   - dienst: Muilkorfpassessie
     omschrijving: 30 minuten, met The Muzzle Movement
     prijs: "€ 20"
+  - dienst: Muilkorftraining
+    omschrijving: per sessie van 60 minuten · gelijk aan het lestarief
+    prijs: "€ 55"
   - dienst: Videobelgesprek
     omschrijving: 30-45 minuten · inclusief vragenlijst vooraf
     prijs: "€ 50"
@@ -21,7 +24,8 @@ tarieven:
 # Aanvullende informatie onder de tabel (elke regel een bullet).
 toelichting:
   - Alle bedragen zijn inclusief btw.
-  - Muilkorftraining gaat op het gewone lestarief; de passessie wordt apart gerekend.
+  - Muilkorftraining gaat per sessie op het gewone lestarief; de passessie wordt apart gerekend.
+  - Neem je meerdere muilkorftrainingen af, dan vallen die in dezelfde prijzen als de 5- en 10-lessenpakketten.
   - Reiskosten bedragen € 0,35 per kilometer, gerekend vanaf postcode 6717XN.
   - De muilkorfpassessie kan bij mij op locatie (geen reiskosten) of bij jou thuis (dan gelden de reiskosten).
   - Lespakketten worden vooraf gefactureerd en zijn twaalf maanden geldig vanaf de eerste les.
