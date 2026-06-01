@@ -997,3 +997,9 @@ details.faq .faq-body {
 		margin: 0 0 1rem 2rem;
 	}
 }
+
+/* Het e-mail-icoon uit de nav-balk niet tonen in het mobiele schuifpaneel
+   (daar verschijnt het anders als een los 'rondje' onder Contact). */
+#navPanel .icons {
+	display: none;
+}
