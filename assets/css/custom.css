@@ -570,6 +570,17 @@ details.faq .faq-body {
 #footer .contact .icon {
 	color: var(--teal) !important;
 }
+/* Social-iconen in de footer (Facebook): geen randstreep, crème op aubergine */
+#footer ul.icons a.icon {
+	border-bottom: 0 !important;
+}
+#footer ul.icons a.icon::before {
+	color: var(--cream);
+	font-size: 1.5rem;
+}
+#footer ul.icons a.icon:hover::before {
+	color: #ffffff !important;
+}
 /* Footer-kolommen netjes als blok: kop bóven de tekst (het template zette
    de kop in een smalle 6rem-kolom náást de tekst, wat overlapte). */
 #footer > section.split.contact > section {
