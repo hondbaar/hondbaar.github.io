@@ -1003,3 +1003,15 @@ details.faq .faq-body {
 #navPanel .icons {
 	display: none;
 }
+
+/* Merkblok (vol logo met eigen achtergrondkleur) op de homepage */
+.merk-blok {
+	margin: 3rem 0;
+	text-align: center;
+}
+.merk-blok img {
+	width: 100%;
+	max-width: 560px;
+	height: auto;
+	border-radius: 10px;
+}
