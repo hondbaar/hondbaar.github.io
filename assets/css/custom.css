@@ -1,9 +1,9 @@
 /* Hondbaar — custom laag boven HTML5 UP "Massively"
    Huisstijl conform design briefing:
      Officiële merkkleuren — Aubergine #34223D · Teal #2B7171 · Crème #F0E6D6
-   Typografie: Poppins (geometrische, warme sans-serif) */
+   Typografie: Montserrat (conform brand guide) */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
 	/* Officiële merkkleuren uit de brand guide / logobestanden */
@@ -23,13 +23,13 @@
 }
 
 /* ===========================================================
-   Typografie — Poppins overal
+   Typografie — Montserrat overal
    =========================================================== */
 body, input, select, textarea,
 h1, h2, h3, h4, h5, h6,
 #nav ul.links, .button, input[type="submit"], input[type="reset"], input[type="button"],
 .post > header.major .date {
-	font-family: 'Poppins', Helvetica, sans-serif;
+	font-family: 'Montserrat', Helvetica, sans-serif;
 }
 body, input, select, textarea {
 	font-weight: 400;
@@ -124,7 +124,7 @@ button.primary:hover,
 /* Logo wordmark — kleine letters, medium gewicht (conform briefing) */
 #header .logo,
 #nav .logo {
-	font-family: 'Poppins', Helvetica, sans-serif;
+	font-family: 'Montserrat', Helvetica, sans-serif;
 	font-weight: 500;
 	text-transform: lowercase;
 	letter-spacing: 0.02em;
@@ -303,7 +303,7 @@ details.faq {
 details.faq summary {
 	cursor: pointer;
 	padding: 1.1rem 1.4rem;
-	font-family: 'Poppins', Helvetica, sans-serif;
+	font-family: 'Montserrat', Helvetica, sans-serif;
 	font-weight: 600;
 	color: var(--purple);
 	list-style: none;
