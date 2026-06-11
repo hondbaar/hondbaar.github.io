@@ -740,6 +740,7 @@ details.faq .faq-body {
 		--accent: #7ed0d2;                   /* teal lichter voor beter contrast op aubergine */
 		--teal: #7ed0d2;
 		--teal-dark: #9bdcdd;
+		--teal-text: #a8e0e1;                /* eyebrow-/labelteksten licht voor leesbaarheid */
 		--border: rgba(240, 230, 214, 0.15);
 	}
 
