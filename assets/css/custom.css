@@ -677,6 +677,11 @@ details.faq .faq-body {
 	.traject-foto img {
 		max-height: 60vh;
 	}
+
+	/* Gestapelde trajectkaarten krijgen onderlinge ruimte op mobiel */
+	.card {
+		margin-bottom: 1.5rem;
+	}
 }
 
 /* Algemene contentfoto (over-pagina e.d.) */
