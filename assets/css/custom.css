@@ -737,9 +737,9 @@ details.faq .faq-body {
 		--fg: #ece6da;                       /* bodytekst → zacht crème */
 		--purple: #f5efe3;                   /* koppen → bijna wit crème */
 		--fg-light: rgba(240, 230, 214, 0.6);
-		--accent: #57b4b6;                   /* teal iets lichter voor contrast */
-		--teal: #57b4b6;
-		--teal-dark: #74c6c8;
+		--accent: #7ed0d2;                   /* teal lichter voor beter contrast op aubergine */
+		--teal: #7ed0d2;
+		--teal-dark: #9bdcdd;
 		--border: rgba(240, 230, 214, 0.15);
 	}
 
@@ -758,7 +758,7 @@ details.faq .faq-body {
 	/* Tekstlinks in de content */
 	#main a {
 		color: var(--teal);
-		border-bottom-color: rgba(87, 180, 182, 0.4);
+		border-bottom-color: rgba(126, 208, 210, 0.4);
 	}
 	#main a:hover {
 		color: var(--teal-dark);
@@ -766,13 +766,13 @@ details.faq .faq-body {
 
 	/* Traject-label (tarief) */
 	.traject .meta {
-		background: rgba(87, 180, 182, 0.15);
-		color: #8fd3d4;
+		background: rgba(126, 208, 210, 0.15);
+		color: #a8e0e1;
 	}
 
 	/* Juridische 'let op'-blokken */
 	.legal .note {
-		background: rgba(87, 180, 182, 0.1);
+		background: rgba(126, 208, 210, 0.1);
 	}
 
 	/* Formuliervelden: lichtere placeholder en rand */
