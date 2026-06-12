@@ -12,9 +12,16 @@
 							<li{% if page.nav == "home" %} class="active"{% endif %}><a href="{{ '/' | relative_url }}">Home</a></li>
 							<li class="has-submenu{% if page.nav == "trajecten" %} active{% endif %}"><a href="{{ '/trajecten.html' | relative_url }}">Trajecten</a>
 								<ul class="submenu">
-									{% for traject in site.data.trajecten %}
+									{% for traject in site.data.trajecten %}{% unless traject.categorie == "muilkorf" %}
 									<li><a href="{{ traject.pagina | relative_url }}">{{ traject.kaart.titel }}</a></li>
-									{% endfor %}
+									{% endunless %}{% endfor %}
+								</ul>
+							</li>
+							<li class="has-submenu{% if page.nav == "muilkorf" %} active{% endif %}"><a href="{{ '/muilkorf.html' | relative_url }}">Muilkorf</a>
+								<ul class="submenu">
+									{% for traject in site.data.trajecten %}{% if traject.categorie == "muilkorf" %}
+									<li><a href="{{ traject.pagina | relative_url }}">{{ traject.kaart.titel }}</a></li>
+									{% endif %}{% endfor %}
 								</ul>
 							</li>
 							<li{% if page.nav == "tarieven" %} class="active"{% endif %}><a href="{{ '/tarieven.html' | relative_url }}">Tarieven</a></li>
