@@ -371,6 +371,10 @@ details.faq .faq-body {
 .legal h2 {
 	margin-top: 2.5rem;
 }
+.legal h3 {
+	margin-top: 1.75rem;
+	font-size: 1.05rem;
+}
 .legal .note,
 .note {
 	background: rgba(45, 122, 123, 0.08);
