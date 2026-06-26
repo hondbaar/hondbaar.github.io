@@ -75,10 +75,10 @@ permalink: /
 								<header class="major">
 									<span class="eyebrow">Wat past bij jullie?</span>
 									<h2>Trajecten op maat</h2>
-									<p>Van een stevige puppystart tot maatwerk voor je volwassen hond, en van muilkorftraining tot advies bij de aanschaf van een hond — er is altijd een passende vorm.</p>
+									<p>Van een stevige puppystart tot maatwerk voor je volwassen hond en advies bij de aanschaf van een hond — er is altijd een passende vorm. Werk je liever aan de muilkorf? Daarvoor is er een aparte <a href="muilkorf.html">muilkorf-sectie</a>.</p>
 								</header>
 								<div class="row">
-									{% for traject in site.data.trajecten %}
+									{% for traject in site.data.trajecten %}{% unless traject.categorie == "muilkorf" %}
 									<div class="col-6 col-12-medium">
 										<a class="card" href="{{ traject.pagina | relative_url }}">
 											<span class="icon solid major {{ traject.icoon }}"></span>
@@ -87,10 +87,11 @@ permalink: /
 											<span class="card-link">Lees meer</span>
 										</a>
 									</div>
-									{% endfor %}
+									{% endunless %}{% endfor %}
 								</div>
 								<ul class="actions">
 									<li><a href="trajecten.html" class="button">Bekijk alle trajecten</a></li>
+									<li><a href="muilkorf.html" class="button">Muilkorf</a></li>
 								</ul>
 							</section>
 

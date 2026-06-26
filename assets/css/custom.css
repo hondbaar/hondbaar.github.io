@@ -423,6 +423,8 @@ details.faq .faq-body {
 
 	#nav ul.links li a {
 		line-height: 3.5rem;
+		white-space: nowrap;
+		padding: 0 1.1rem;
 	}
 
 	/* Logo-mark links in de balk, vóór 'Home' */

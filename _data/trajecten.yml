@@ -1,12 +1,14 @@
-# Alle trajecten op één plek.
+# Alle trajecten en muilkorf-diensten op één plek.
 # Worden gebruikt op:
-#   - de homepage (de korte 'kaart'-versie)
+#   - de homepage (de korte 'kaart'-versie, alleen trajecten)
 #   - de trajecten-overzichtspagina (samenvatting + 'Lees meer'-knop)
+#   - de muilkorf-sectie in het menu
 #   - de losse traject-pagina's (volledige beschrijving)
 # Pas je hier iets aan, dan verandert het overal mee.
 #
 # Velden per traject:
 #   id        : intern kenmerk
+#   categorie : 'muilkorf' voor de muilkorf-sectie; leeg/afwezig voor gewone trajecten
 #   pagina    : bestandsnaam van de losse traject-pagina
 #   icoon     : Font Awesome-icoon (bv. fa-paw)
 #   titel     : kop op de losse traject-pagina
@@ -15,7 +17,7 @@
 #   herken    : lijst met herkenbare uitspraken (optioneel)
 #   punten_titel / punten : opsomming van wat het traject biedt
 #   knoppen   : knoppen onder het traject (tekst + link)
-#   kaart     : korte versie (kop + tekst) voor homepage en overzicht
+#   kaart     : korte versie (kop + tekst) voor homepage, overzicht en menu
 
 - id: puppy
   pagina: puppytraject.html
@@ -85,7 +87,44 @@
       Loop je ergens tegenaan — van lijntrekken tot uitvalgedrag? Samen kijken we
       wat jij en je hond nodig hebben.
 
+- id: passessie
+  categorie: muilkorf
+  pagina: muilkorfpassessie.html
+  icoon: fa-ruler-combined
+  titel: Muilkorfpassessie
+  meta: 30 minuten · €20 · met The Muzzle Movement
+  foto: images/muilkorf-bos.jpg
+  foto_alt: Hond met een goed passende muilkorf in het bos
+  intro: >-
+    Een goed passende muilkorf is het halve werk. Tijdens een passessie kijken we
+    samen welke maat en welk type het beste past bij de snuit en de behoeften van
+    jouw hond — eentje waarmee hij comfortabel kan hijgen, drinken en belonen
+    ontvangen. Je hoeft hiervoor geen heel traject te doen: je kunt ook alleen
+    langskomen om te passen.
+  punten_titel: "Wat de passessie biedt:"
+  punten:
+    - Een erkende passessie als partner van The Muzzle Movement
+    - Bepalen van de juiste maat en het juiste type muilkorf
+    - "Aandacht voor comfort: hijgen, drinken en beloond kunnen worden"
+    - Uitleg over de eerste stappen van positieve gewenning
+    - Sluit naadloos aan op een muilkorf-trainingstraject
+    - De passessie kan bij mij op locatie (geen reiskosten) of bij jou thuis (dan gelden reiskosten van €0,35 per km)
+    - Heb je de juiste maat gevonden? Dan kies je zelf: de muilkorf rechtstreeks bij mij bestellen, of met 10% korting bij The Muzzle Movement (je krijgt dan een kortingscode van mij)
+  knoppen:
+    - tekst: Plan een passessie
+      link: contact.html
+    - tekst: Muilkorf aanschaffen
+      link: muilkorf-aanschaffen.html
+    - tekst: Meer over muilkorftraining
+      link: muilkorf.html
+  kaart:
+    titel: Muilkorfpassessie
+    tekst: >-
+      Even langskomen om samen de juiste, comfortabel passende muilkorf te vinden —
+      met The Muzzle Movement. 30 minuten, €20.
+
 - id: muilkorf
+  categorie: muilkorf
   pagina: muilkorf.html
   icoon: fa-shield-alt
   titel: Muilkorftraining
@@ -114,38 +153,17 @@
       Positief en rustig leren dat de muilkorf oké is — handig voor dierenarts,
       vervoer of vakantie. Inclusief passessie.
 
-- id: passessie
-  pagina: muilkorfpassessie.html
-  icoon: fa-ruler-combined
-  titel: Muilkorfpassessie
-  meta: 30 minuten · €20 · met The Muzzle Movement
-  foto: images/muilkorf-bos.jpg
-  foto_alt: Hond met een goed passende muilkorf in het bos
-  intro: >-
-    Een goed passende muilkorf is het halve werk. Tijdens een passessie kijken we
-    samen welke maat en welk type het beste past bij de snuit en de behoeften van
-    jouw hond — eentje waarmee hij comfortabel kan hijgen, drinken en belonen
-    ontvangen. Je hoeft hiervoor geen heel traject te doen: je kunt ook alleen
-    langskomen om te passen.
-  punten_titel: "Wat de passessie biedt:"
-  punten:
-    - Een erkende passessie als partner van The Muzzle Movement
-    - Bepalen van de juiste maat en het juiste type muilkorf
-    - "Aandacht voor comfort: hijgen, drinken en beloond kunnen worden"
-    - Uitleg over de eerste stappen van positieve gewenning
-    - Sluit naadloos aan op een muilkorf-trainingstraject
-    - De passessie kan bij mij op locatie (geen reiskosten) of bij jou thuis (dan gelden reiskosten van €0,35 per km)
-    - 10% korting op een muilkorf bij The Muzzle Movement — je krijgt na het passen een kortingscode van mij
-  knoppen:
-    - tekst: Plan een passessie
-      link: contact.html
-    - tekst: Meer over muilkorftraining
-      link: muilkorf.html
+- id: aanschaffen
+  categorie: muilkorf
+  pagina: muilkorf-aanschaffen.html
+  icoon: fa-tag
+  titel: Muilkorf aanschaffen
+  meta: The Muzzle Movement · na de passessie
   kaart:
-    titel: Muilkorfpassessie
+    titel: Muilkorf aanschaffen
     tekst: >-
-      Even langskomen om samen de juiste, comfortabel passende muilkorf te vinden —
-      met The Muzzle Movement. 30 minuten, €20.
+      Na de passessie bestel je je perfect passende muilkorf van The Muzzle Movement
+      rechtstreeks bij mij. Bekijk de maten en prijzen.
 
 - id: videobel
   pagina: videobelsessie.html

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Trajecten — Hondbaar | Puppytraject, maatwerk & videobelsessie"
-description: "De trajecten van Hondbaar: puppytraject, maatwerktraining voor volwassen honden, muilkorftraining en videobelsessies voor toekomstige hondeneigenaren."
+description: "De trajecten van Hondbaar: puppytraject, maatwerktraining voor volwassen honden en videobelsessies voor toekomstige hondeneigenaren."
 nav: trajecten
 permalink: /trajecten.html
 ---
@@ -14,7 +14,7 @@ permalink: /trajecten.html
 									<p>Elke hond en elke eigenaar is anders. Daarom werk ik met trajecten die zich aanpassen aan jullie vraag — altijd welzijnsgericht, altijd 1-op-1, en altijd met video-analyse zodat je echt ziet wat er gebeurt. Hieronder een overzicht; klik door voor alle details.</p>
 								</header>
 								<div class="row">
-									{% for traject in site.data.trajecten %}
+									{% for traject in site.data.trajecten %}{% unless traject.categorie == "muilkorf" %}
 									<div class="col-6 col-12-medium">
 										<a class="card" href="{{ traject.pagina | relative_url }}">
 											<span class="icon solid major {{ traject.icoon }}"></span>
@@ -23,7 +23,7 @@ permalink: /trajecten.html
 											<span class="card-link">Lees meer</span>
 										</a>
 									</div>
-									{% endfor %}
+									{% endunless %}{% endfor %}
 								</div>
 								<ul class="actions">
 									<li><a href="{{ '/tarieven.html' | relative_url }}" class="button">Bekijk de tarieven</a></li>
