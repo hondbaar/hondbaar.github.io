@@ -12,7 +12,7 @@
 							</section>
 							<section>
 								<h3>Meer</h3>
-								<p><a href="{{ '/privacy.html' | relative_url }}">Privacyverklaring</a> · <a href="{{ '/voorwaarden.html' | relative_url }}">Algemene voorwaarden</a></p>
+								<p><a href="{{ '/privacy.html' | relative_url }}">Privacyverklaring</a> · <a href="{{ '/voorwaarden.html' | relative_url }}">Algemene voorwaarden</a>{% if site.data.site.google_tag_id and site.data.site.google_tag_id != "" %} · <a href="#cookievoorkeuren">Cookievoorkeuren</a>{% endif %}</p>
 							</section>
 							<section>
 								<h3>Volg mij</h3>
@@ -31,3 +31,5 @@
 							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
+
+				{% include cookiebanner.html %}

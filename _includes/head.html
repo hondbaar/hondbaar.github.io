@@ -24,4 +24,33 @@
 		<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 		<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" />
 		<noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
+{% if site.data.site.google_tag_id and site.data.site.google_tag_id != "" %}
+		<!-- Google tag (gtag.js) met Consent Mode v2 -->
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			// Standaard: alle opslag geweigerd tot de bezoeker toestemming geeft.
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': 'denied',
+				'wait_for_update': 500
+			});
+			// Eerder gegeven toestemming direct herstellen (vóór de tag laadt).
+			try {
+				if (localStorage.getItem('hb-consent') === 'granted') {
+					gtag('consent', 'update', {
+						'ad_storage': 'granted',
+						'ad_user_data': 'granted',
+						'ad_personalization': 'granted',
+						'analytics_storage': 'granted'
+					});
+				}
+			} catch (e) {}
+			gtag('js', new Date());
+			gtag('config', '{{ site.data.site.google_tag_id }}');
+		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.site.google_tag_id }}"></script>
+{% endif %}
 	</head>

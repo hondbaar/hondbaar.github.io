@@ -10,6 +10,9 @@ telefoon: "06 13 67 31 11"
 telefoon_link: "+31613673111"
 facebook: "https://www.facebook.com/profile.php?id=61590503670947"
 
+# Google tag (gtag.js). Leeg laten schakelt de tag + cookiebanner uit.
+google_tag_id: "AW-18233856153"
+
 # Footer
 footer:
   werkgebied_titel: Werkgebied
