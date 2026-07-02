@@ -1,0 +1,65 @@
+{% if site.data.site.google_tag_id and site.data.site.google_tag_id != "" %}
+<!-- Cookie-consent banner (Google Consent Mode v2) -->
+<div id="cookiebanner" class="cookiebanner" role="dialog" aria-live="polite" aria-label="Cookiemelding" hidden>
+	<div class="cookiebanner-inner">
+		<p class="cookiebanner-text">
+			Hondbaar gebruikt cookies van Google (Google&nbsp;Ads) om te meten hoe de website wordt gebruikt en om advertenties af te stemmen. Deze worden pas geplaatst als je ze accepteert. Meer lezen? Zie de <a href="{{ '/privacy.html' | relative_url }}#cookies">privacyverklaring</a>.
+		</p>
+		<div class="cookiebanner-actions">
+			<button type="button" class="button small" id="cookie-weiger">Weigeren</button>
+			<button type="button" class="button primary small" id="cookie-accepteer">Accepteren</button>
+		</div>
+	</div>
+</div>
+<script>
+	(function () {
+		var KEY = 'hb-consent';
+		var banner = document.getElementById('cookiebanner');
+		if (!banner) return;
+
+		function show() { banner.hidden = false; }
+		function hide() { banner.hidden = true; }
+
+		function grant() {
+			if (typeof gtag === 'function') {
+				gtag('consent', 'update', {
+					'ad_storage': 'granted',
+					'ad_user_data': 'granted',
+					'ad_personalization': 'granted',
+					'analytics_storage': 'granted'
+				});
+			}
+			try { localStorage.setItem(KEY, 'granted'); } catch (e) {}
+			hide();
+		}
+
+		function deny() {
+			if (typeof gtag === 'function') {
+				gtag('consent', 'update', {
+					'ad_storage': 'denied',
+					'ad_user_data': 'denied',
+					'ad_personalization': 'denied',
+					'analytics_storage': 'denied'
+				});
+			}
+			try { localStorage.setItem(KEY, 'denied'); } catch (e) {}
+			hide();
+		}
+
+		var stored = null;
+		try { stored = localStorage.getItem(KEY); } catch (e) {}
+		if (stored !== 'granted' && stored !== 'denied') { show(); }
+
+		var ja = document.getElementById('cookie-accepteer');
+		var nee = document.getElementById('cookie-weiger');
+		if (ja) ja.addEventListener('click', grant);
+		if (nee) nee.addEventListener('click', deny);
+
+		// Link "Cookievoorkeuren" in de footer heropent de banner.
+		document.addEventListener('click', function (e) {
+			var t = e.target.closest && e.target.closest('a[href$="#cookievoorkeuren"], a[href="#cookievoorkeuren"]');
+			if (t) { e.preventDefault(); show(); }
+		});
+	})();
+</script>
+{% endif %}
