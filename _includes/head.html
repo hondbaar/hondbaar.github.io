@@ -50,6 +50,9 @@
 			} catch (e) {}
 			gtag('js', new Date());
 			gtag('config', '{{ site.data.site.google_tag_id }}');
+{% if site.data.site.ga4_id and site.data.site.ga4_id != "" %}
+			gtag('config', '{{ site.data.site.ga4_id }}');   // Google Analytics 4
+{% endif %}
 		</script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.site.google_tag_id }}"></script>
 {% endif %}

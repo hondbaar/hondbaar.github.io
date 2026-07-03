@@ -12,6 +12,8 @@ facebook: "https://www.facebook.com/profile.php?id=61590503670947"
 
 # Google tag (gtag.js). Leeg laten schakelt de tag + cookiebanner uit.
 google_tag_id: "AW-18233856153"
+# Google Analytics 4 meting-ID (optioneel, naast bovenstaande Ads-tag).
+ga4_id: "G-WPYHZZ4154"
 
 # Footer
 footer:
