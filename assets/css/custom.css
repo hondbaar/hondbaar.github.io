@@ -780,6 +780,28 @@ details.faq .faq-body {
 	white-space: nowrap;
 	margin: 0;
 }
+/* Knoppen in de banner: vaste kleuren (onafhankelijk van licht/donker),
+   zodat het contrast op de aubergine achtergrond altijd goed is. */
+.cookiebanner .button {
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px rgba(240, 230, 214, 0.55);
+	color: #ece6da !important;
+}
+.cookiebanner .button:hover {
+	background-color: rgba(240, 230, 214, 0.12);
+	box-shadow: inset 0 0 0 2px #ece6da;
+	color: #ffffff !important;
+}
+.cookiebanner .button.primary {
+	background-color: #ece6da !important;
+	box-shadow: inset 0 0 0 2px #ece6da;
+	color: #34223D !important;
+}
+.cookiebanner .button.primary:hover {
+	background-color: #ffffff !important;
+	box-shadow: inset 0 0 0 2px #ffffff;
+	color: #34223D !important;
+}
 @media screen and (max-width: 736px) {
 	.cookiebanner-inner {
 		flex-direction: column;
