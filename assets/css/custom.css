@@ -761,6 +761,15 @@ details.faq .faq-body {
 	gap: 1.5rem;
 	padding: 1.25rem 1.5rem;
 }
+.cookiebanner-copy {
+	flex: 1;
+}
+.cookiebanner-title {
+	margin: 0 0 0.35rem 0;
+	font-weight: 700;
+	font-size: 1.05rem;
+	color: #ece6da;
+}
 .cookiebanner-text {
 	margin: 0;
 	font-size: 0.9rem;
