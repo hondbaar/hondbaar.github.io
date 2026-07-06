@@ -7,3 +7,16 @@
 			<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
 			<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 			<script src="{{ '/assets/js/a11y.js' | relative_url }}"></script>
+{% if site.data.site.google_tag_id and site.data.site.google_tag_id != "" %}
+			<!-- Conversie: klik op telefoonnummer of e-mailadres = contactmoment -->
+			<script>
+				(function () {
+					document.addEventListener('click', function (e) {
+						var link = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+						if (!link || typeof gtag !== 'function') return;
+						var method = link.getAttribute('href').indexOf('tel:') === 0 ? 'telefoon' : 'e-mail';
+						gtag('event', 'ads_conversion_Contact_1', { 'method': method });
+					});
+				})();
+			</script>
+{% endif %}

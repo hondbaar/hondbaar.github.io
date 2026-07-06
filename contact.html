@@ -92,6 +92,10 @@ permalink: /contact.html
 								if (!form) return;
 								var bedankt = document.getElementById('form-bedankt');
 								form.addEventListener('submit', function () {
+									// Conversie: contactformulier verzonden (Google Ads / GA4).
+									if (typeof gtag === 'function') {
+										gtag('event', 'ads_conversion_Contact_1', { 'method': 'formulier' });
+									}
 									// Het formulier postt naar de verborgen iframe; we tonen direct
 									// de bedankmelding en verbergen het formulier. (We kunnen de
 									// Google-respons niet uitlezen, maar de inzending gaat door.)
